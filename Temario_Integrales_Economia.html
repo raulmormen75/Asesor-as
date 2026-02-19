@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temario de Integrales para Economistas</title>
+
+    <!-- Fonts: Space Grotesk (Modern/Display) & Manrope (Clean/Readable) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            /* BRAND IDENTITY CORE */
+            --brand-black: #0B0B0B;
+            --brand-blue: #1C2A3A;
+            /* Analytic Blue - The Anchor */
+            --brand-gold: #C6A75E;
+            /* Sober Gold - The Accent */
+            --brand-graphite: #2E2E2E;
+            --brand-ivory: #F2F2EE;
+
+            /* VIBRANT ACCENTS (For 18-25 appeal) */
+            --acc-teal: #06b6d4;
+            /* Cyan/Teal pop */
+            --acc-indigo: #6366f1;
+            /* Modern Indigo */
+            --acc-violet: #8b5cf6;
+            /* Electric Violet */
+            --acc-rose: #f43f5e;
+            /* Energetic Rose */
+            --acc-emerald: #10b981;
+            /* Fresh Emerald */
+            --acc-amber: #f59e0b;
+            /* Warm Amber */
+
+            /* FUNCTIONAL */
+            --bg-body: var(--brand-ivory);
+            --bg-surface: #ffffff;
+            --text-heading: var(--brand-blue);
+            --text-body: #334155;
+            --border-light: #e2e8f0;
+
+            /* UI CONSTANTS */
+            --radius-md: 16px;
+            --radius-lg: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            /* Subtle grain or mesh gradient for texture */
+            background-image:
+                radial-gradient(at 0% 0%, rgba(198, 167, 94, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(28, 42, 58, 0.05) 0px, transparent 50%);
+            color: var(--text-body);
+            font-family: 'Manrope', sans-serif;
+            line-height: 1.65;
+            font-size: 17px;
+        }
+
+        /* TYPOGRAPHY */
+        h1,
+        h2,
+        h3,
+        h4,
+        .module-number {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+            color: var(--text-heading);
+        }
+
+        h1 {
+            font-size: 4rem;
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            /* Gradient Text: Brand Blue -> Brand Gold */
+            background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue) 40%, var(--brand-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* SECTION THEMES: Branding + Vibration Mix */
+        /* We define a gradient for headers/accents */
+        section {
+            --theme-gradient: linear-gradient(135deg, var(--brand-blue), var(--acc-indigo));
+            --theme-color: var(--brand-blue);
+        }
+
+        /* 0-1 Foundation: Blue -> Teal */
+        #s0,
+        #s1 {
+            --theme-gradient: linear-gradient(135deg, var(--brand-blue), var(--acc-teal));
+            --theme-color: var(--acc-teal);
+        }
+
+        /* 2-3 Core Calculus: Blue -> Indigo (Deep & Technical) */
+        #s2,
+        #s3 {
+            --theme-gradient: linear-gradient(135deg, var(--brand-blue), var(--acc-indigo));
+            --theme-color: var(--acc-indigo);
+        }
+
+        /* 4-5 Integrals: Blue -> Violet (Creative/Complex) */
+        #s4,
+        #s5 {
+            --theme-gradient: linear-gradient(135deg, var(--brand-blue), var(--acc-violet));
+            --theme-color: var(--acc-violet);
+        }
+
+        /* 6-7 Finance: GOLD -> Emerald (Wealth/Money) -> THIS IS KEY BRAND MIX */
+        #s6,
+        #s7 {
+            --theme-gradient: linear-gradient(135deg, var(--brand-gold), var(--acc-emerald));
+            --theme-color: var(--brand-gold);
+        }
+
+        /* 8-9 Risk: Blue -> Rose (Risk/Warning) */
+        #s8,
+        #s9 {
+            --theme-gradient: linear-gradient(135deg, var(--brand-blue), var(--acc-rose));
+            --theme-color: var(--acc-rose);
+        }
+
+        /* 10-12 Expert: Blue -> Amber/Gold (Prestige) */
+        #s10,
+        #s11,
+        #s12 {
+            --theme-gradient: linear-gradient(135deg, var(--brand-blue), var(--brand-gold));
+            --theme-color: var(--acc-amber);
+        }
+
+        /* LAYOUT & COMPONENT OVERRIDES */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 8rem 0 6rem;
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 1.35rem;
+            color: #64748b;
+            font-weight: 400;
+            max-width: 650px;
+        }
+
+        /* Layout Main - Increased Gap for Breathing Room */
+        .syllabus-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5rem;
+            /* Reduced from 8rem to 5rem */
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        /* GLASS HEADER */
+        .module-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            position: sticky;
+            top: 20px;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            border-radius: var(--radius-md);
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            /* Subtle Brand Border */
+            border-left: 4px solid var(--theme-color);
+            box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .module-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--theme-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.4;
+            transition: 0.3s;
+        }
+
+        section:hover .module-number {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .module-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+        }
+
+        /* CARDS - Reduced size for better hierarchy */
+        .topic-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .topic-item {
+            background: var(--bg-surface);
+            padding: 1.5rem;
+            /* Tightened from 2rem */
+            border-radius: var(--radius-md);
+            /* Slightly smaller radius */
+            border: 1px solid var(--border-light);
+            box-shadow: 0 2px 4px rgba(28, 42, 58, 0.03);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Brand Gold Tag on hover */
+        .topic-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--theme-gradient);
+            opacity: 0;
+            transition: 0.3s;
+            border-radius: var(--radius-md) 0 0 var(--radius-md);
+        }
+
+        .topic-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -8px rgba(28, 42, 58, 0.08);
+            border-color: transparent;
+        }
+
+        .topic-item:hover::after {
+            opacity: 1;
+        }
+
+        .topic-title {
+            font-size: 1.1rem;
+            /* Visual Step Down from 1.75rem header */
+            font-weight: 700;
+            background: var(--theme-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+
+        /* LISTS */
+        .subtopic-list li {
+            list-style: none;
+            margin-bottom: 0.4rem;
+            padding-left: 1.25rem;
+            position: relative;
+            color: #4b5563;
+            font-size: 0.9rem;
+            /* Adjusted for hierarchy */
+        }
+
+        .subtopic-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--brand-gold);
+            /* Brand mark on every item */
+            font-weight: bold;
+        }
+
+        /* MATH BLOCKS */
+        .math-block {
+            background: #F8FAFC;
+            border-left: 3px solid var(--brand-blue);
+            /* Always Analytic structure */
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.25rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--brand-blue);
+        }
+
+        /* When hovering card, Math block gets theme color */
+        .topic-item:hover .math-block {
+            border-left-color: var(--theme-color);
+        }
+
+        /* NAV DOTS */
+        .nav-dots {
+            position: fixed;
+            right: 3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            z-index: 50;
+        }
+
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .nav-dot:hover {
+            background: var(--theme-color);
+            transform: scale(1.3);
+        }
+
+        /* Theme preview on hover */
+
+        .nav-dot.active {
+            background: var(--brand-blue);
+            transform: scale(1.4);
+            box-shadow: 0 0 0 4px rgba(198, 167, 94, 0.2);
+        }
+
+        /* Tooltip */
+        .nav-dot:hover::after {
+            content: attr(data-label);
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--brand-blue);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 1;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+        }
+
+        .nav-dot::after {
+            content: '';
+            opacity: 0;
+            transition: 0.2s;
+            pointer-events: none;
+        }
+
+        /* Animations */
+        section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            margin-top: 6rem;
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .nav-dots {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-dots" id="navDots">
+        <!-- JS generated dots -->
+    </div>
+
+    <div class="container">
+        <header>
+
+            <h1>Integrales para<br><span class="text-gold">Economistas</span></h1>
+            <p class="hero-subtitle">
+                Guía técnica avanzada de 0 a Experto.
+                <br>
+                <span style="font-size: 0.9em; opacity: 0.7;">Cimientos &bull; Técnica &bull; Aplicación &bull;
+                    Control</span>
+            </p>
+        </header>
+
+        <main class="syllabus-grid">
+
+            <!-- SEC 0 -->
+            <section id="s0">
+                <div class="module-header">
+                    <span class="module-number">00</span>
+                    <span class="module-title">Cimientos Previos</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">0.1 Aritmética y Álgebra Operativa</div>
+                        <ul class="subtopic-list">
+                            <li>Jerarquía de operaciones, Fracciones y Potencias.</li>
+                            <li>Factorización (Factor común, dif. cuadrados, TCP).</li>
+                            <li>Ecuaciones lineales y cuadráticas.</li>
+                        </ul>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">0.2 Funciones y Gráficas</div>
+                        <ul class="subtopic-list">
+                            <li>Concepto de función, dominio y rango.</li>
+                            <li>Funciones típicas: Lineal, Cuadrática, Potencia \(x^a\), Exponencial \(e^x\),
+                                Logarítmica \(\ln(x)\).</li>
+                            <li>Interpretación: Niveles vs Cambios.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 1 -->
+            <section id="s1">
+                <div class="module-header">
+                    <span class="module-number">01</span>
+                    <span class="module-title">Límites y Continuidad</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">1.1 Definición y Cálculo</div>
+                        <ul class="subtopic-list">
+                            <li>Comportamiento local y acercamiento.</li>
+                            <li>Límites al infinito y laterales.</li>
+                        </ul>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">1.2 Continuidad e Indeterminación</div>
+                        <ul class="subtopic-list">
+                            <li>Tipos de discontinuidad (removible, salto, infinita).</li>
+                            <li>Formas indeterminadas: \(0/0\), \(\infty/\infty\).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 2 -->
+            <section id="s2">
+                <div class="module-header">
+                    <span class="module-number">02</span>
+                    <span class="module-title">Cálculo Diferencial</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">2.1 La Derivada en Economía</div>
+                        <ul class="subtopic-list">
+                            <li>Interpretación geométrica: Pendiente y tasa de cambio.</li>
+                            <li>Marginales: Costo, Utilidad y Producto marginal.</li>
+                        </ul>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">2.2 Reglas de Derivación</div>
+                        <ul class="subtopic-list">
+                            <li>Potencia, Producto, Cociente, Cadena.</li>
+                            <li>Derivadas de \(e^x\), \(\ln(x)\) y trigonométricas.</li>
+                        </ul>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">2.3 Optimización Simple</div>
+                        <ul class="subtopic-list">
+                            <li>Máximos, mínimos y criterios de derivada.</li>
+                            <li>Concavidad y puntos de inflexión.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 3 -->
+            <section id="s3">
+                <div class="module-header">
+                    <span class="module-number">03</span>
+                    <span class="module-title">Integral Indefinida</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">3.1 Concepto y Tabla Base</div>
+                        <div class="math-block">
+                            \(\int f(x)dx = F(x) + C\)
+                        </div>
+                        <ul class="subtopic-list">
+                            <li>Potencias \(\int x^n dx\) y Exponenciales \(\int e^x dx\).</li>
+                            <li>Significado de la constante \(C\).</li>
+                        </ul>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">3.3 Técnicas Fundamentales</div>
+                        <ul class="subtopic-list">
+                            <li><strong>Sustitución:</strong> Identificar "adentro" y su derivada.</li>
+                            <li><strong>Por Partes:</strong> Elección de \(u\) y \(dv\).</li>
+                            <li>Fracciones parciales e Integrales Trigonométricas.</li>
+                        </ul>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">3.4 Estrategia de Diagnóstico</div>
+                        <ul class="subtopic-list">
+                            <li>¿Composición? &rarr; Sustitución.</li>
+                            <li>¿Producto mixto? &rarr; Por partes.</li>
+                            <li>¿Cociente de polinomios? &rarr; Fracciones parciales.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 4 -->
+            <section id="s4">
+                <div class="module-header">
+                    <span class="module-number">04</span>
+                    <span class="module-title">Integral Definida</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">4.2 TFC y Acumulación</div>
+                        <div class="math-block">
+                            \(\int_a^b f(x) dx = F(b) - F(a)\)
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">4.4 Aplicaciones Económicas</div>
+                        <ul class="subtopic-list">
+                            <li>Costo Total: \(C(Q) = C(0) + \int_0^Q MC(q)dq\)</li>
+                            <li>Excedente del Consumidor: \(EC = \int_0^{Q^*} (P_D(q) - P^*)dq\)</li>
+                            <li>Excedente del Productor: \(EP = \int_0^{Q^*} (P^* - P_S(q))dq\)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 5 -->
+            <section id="s5">
+                <div class="module-header">
+                    <span class="module-number">05</span>
+                    <span class="module-title">Integrales Impropias</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">5.1 Intervalos Infinitos</div>
+                        <div class="math-block">\(\int_a^\infty f(x)dx\)</div>
+                        <ul class="subtopic-list">
+                            <li>Convergencia vs Divergencia.</li>
+                            <li>Interpretación: Valores acumulados a largo plazo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 6 & 7 combined for flow -->
+            <section id="s6">
+                <div class="module-header">
+                    <span class="module-number">06</span>
+                    <span class="module-title">Aplicaciones Financieras</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">Valor Presente (Flujos Descontados)</div>
+                        <div class="math-block">
+                            \(VP = \int_0^T y(t)e^{-rt} dt\)
+                        </div>
+                        <ul class="subtopic-list">
+                            <li>Descuento continuo y horizonte infinito.</li>
+                            <li>Modelos de Crecimiento continuo y Depreciación.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 8 -->
+            <section id="s8">
+                <div class="module-header">
+                    <span class="module-number">08</span>
+                    <span class="module-title">Integrales Múltiples</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">8.1 Dobles y Triples</div>
+                        <ul class="subtopic-list">
+                            <li>Regiones rectangulares y generales.</li>
+                            <li>Cambio de orden de integración.</li>
+                            <li>Aplicación: Bienestar agregado con heterogeneidad.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 9 -->
+            <section id="s9">
+                <div class="module-header">
+                    <span class="module-number">09</span>
+                    <span class="module-title">Probabilidad y Riesgo</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">9.2 Esperanza y Varianza</div>
+                        <div class="math-block">
+                            \(E[X] = \int_{-\infty}^{\infty} x f(x) dx\)
+                        </div>
+                        <ul class="subtopic-list">
+                            <li>Distribuciones continuas (Uniforme, Normal).</li>
+                            <li>Densidad \(f(x)\) y Acumulada \(F(x)\).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 10 -->
+            <section id="s10">
+                <div class="module-header">
+                    <span class="module-number">10</span>
+                    <span class="module-title">Ecuaciones Diferenciales</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">10.1 EDO Lineales</div>
+                        <ul class="subtopic-list">
+                            <li>Separación de variables.</li>
+                            <li>Factor integrante.</li>
+                            <li>Dinámica: Crecimiento y ajuste parcial.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 11 -->
+            <section id="s11">
+                <div class="module-header">
+                    <span class="module-number">11</span>
+                    <span class="module-title">Optimización Dinámica</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">11.1 Control Óptimo</div>
+                        <div class="math-block">
+                            max \(\int_0^T U(x,u,t) dt\)
+                        </div>
+                        <ul class="subtopic-list">
+                            <li>Ecuación de Euler y Condiciones de Transversalidad.</li>
+                            <li>Hamiltoniano (Pontryagin) y Precios Sombra.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 12 -->
+            <section id="s12">
+                <div class="module-header">
+                    <span class="module-number">12</span>
+                    <span class="module-title">Herramientas Expertas</span>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-title">12.2 Lectura de Papers</div>
+                        <ul class="subtopic-list">
+                            <li>Identificar integrales de Acumulación.</li>
+                            <li>Bienestar Agregado y Valor Presente.</li>
+                            <li>Integración numérica (Trapecios, Simpson).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+
+
+            <div style="margin-bottom: 1.5rem;">
+                <p
+                    style="font-size: 0.9rem; letter-spacing: 0.02em; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 500;">
+                    Material desarrollado por el</p>
+                <h4
+                    style="font-size: 1.5rem; color: var(--color-blue-analytic); margin: 0; font-family: 'Space Grotesk', sans-serif;">
+                    Prof. Raul Morales Mendoza</h4>
+            </div>
+
+
+        </footer>
+    </div>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Navigation Dots Generator
+        const sections = document.querySelectorAll('section');
+        const navDots = document.getElementById('navDots');
+
+        sections.forEach((sec, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'nav-dot';
+            const title = sec.querySelector('.module-title').innerText;
+            dot.setAttribute('data-label', title);
+
+            dot.addEventListener('click', () => {
+                sec.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            navDots.appendChild(dot);
+        });
+
+        // Active Dot Updater
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            // Update dots classes? 
+            // Better mechanism:
+            document.querySelectorAll('.nav-dot').forEach((dot, idx) => {
+                dot.classList.remove('active');
+                if (sections[idx].getAttribute('id') === current) {
+                    dot.classList.add('active');
+                }
+            });
+        });
+
+        // Trigger math typeset manually if needed (MathJax auth-runs usually)
+    </script>
+</body>
+
+</html>

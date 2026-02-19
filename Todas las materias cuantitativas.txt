@@ -1,0 +1,691 @@
+MATERIA: Álgebra Lineal
+
+DESCRIPCIÓN GENERAL DE CONTENIDOS:
+I. Vectores
+II. Matrices y sistemas de ecuaciones
+III. Espacios vectoriales
+IV. Diagonalización de matrices
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Vectores
+1.1 Vectores.
+1.1.1 Definición
+1.1.2 Operación de vectores.
+1.1.3 Representación gráfica.
+1.1.3.1 Suma, resta y multiplicación por un escalar.
+1.1.3.2 Suma, resta y multiplicación de vectores.
+1.2 Propiedades de un vector (producto punto).
+1.2.1 Norma de un vector.
+1.2.2 Angulo entre vectores.
+1.2.3 Vectores ortogonales.
+1.2.4 Vectores colineales.
+1.3 Producto Cruz.
+1.3.1 Propiedades del producto cruz.
+1.3.2 Plano tangente.
+
+N° UNIDAD TEMÁTICA: II
+NOMBRE: Matrices y sistemas de ecuaciones
+2.1 Matrices
+2.1.1 Definición
+2.1.2 Tipos de matrices
+2.1.2.1 Cuadrada, diagonal, identidad y simétrica
+2.1.3 Aritmética de matrices
+2.1.3.1 Propiedades de la suma, resta y multiplicación
+2.1.3.2 Método de inducción: potencia de matrices y matriz idempotente
+2.1.4 Transpuesta y sus propiedades
+2.1.5 Traza y sus propiedades
+2.2 Determinantes
+2.2.1 Definición
+2.2.2 Propiedades
+2.3 Solución de sistemas de ecuaciones lineales
+2.3.1 Representación matricial de un sistema de ecuaciones lineales.
+2.3.2 Métodos de solución
+2.3.2.1 Método de Sarrus
+2.3.2.2 Método de Cramer
+2.3.2.3 Inversa de una matriz por el método de Gauss - Jordan y adjunta
+
+N° UNIDAD TEMÁTICA: II 
+NOMBRE: Espacios vectoriales
+3.1 Espacio y subespacio vectorial.
+3.2 Combinación e independencia lineal
+3.3 Base, dimensión y rango
+3.4 Transformaciones lineales
+3.4.1 Núcleo e imagen
+3.5 Matriz de una transformación lineal
+3.6 Cambio de base
+
+N° UNIDAD TEMÁTICA: IV
+NOMBRE: Diagonalización de matrices
+4.1 Valores propios y vectores propios
+4.1.1 Obtención de los valores y vectores propios de una matriz y sus propiedades
+4.1.2 Propiedad de los valores propios: traza y determinante de una matriz e independencia lineal
+4.2 Diagonalización de matrices
+4.3 Matrices simétricas y formas cuadráticas
+4.4 Matrices hermitianas
+4.5 Forma canónica de Jordán
+
+---
+---
+
+MATERIA: Cálculo para el Análisis Económico
+
+DESCRIPCIÓN GENERAL DE CONTENIDOS:
+I. Derivadas.
+II. Optimización libre con una variable.
+III. Derivadas parciales.
+IV. Optimización libre y restringida en varias variables.
+V. Integral definida e indefinida.
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Derivadas
+1.1 Funciones
+1.1.1 Definición e interpretación geométrica
+1.1.2 Ecuación punto-pendiente de la recta
+1.1.3 Ecuación general de la recta
+1.1.4 Intersección de 2 o mas rectas
+1.2 límites
+1.2.1 Definición
+1.2.2 Reglas de los límites
+1.2.3 Forma indeterminada
+1.3 Cálculo Diferencial
+1.3.1 Definición de Derivada
+1.3.1.1 Interpretación geométrica
+1.3.2 Reglas básicas de la derivación
+1.3.3 Regla de la cadena
+1.3.4 Funciones trascendentales: logaritmicas y exponenciales
+1.3.5 Trigonométricas directas (seno, coseno y tangente)
+1.4 Derivadas implícitas
+1.5 Derivadas sucesivas o de orden superior
+
+N° UNIDAD TEMÁTICA: II
+NOMBRE: Optimización libre con una variable
+2.1 Máximos y mínimos relativos y absolutos
+2.1.1 Método gráfico
+2.1.2 Método Analítico
+2.2 Criterios de la primera y segunda derivada
+2.2.1 Concavidad y puntos de inflexión
+2.2.2 Rangos de crecimiento y decrecimiento de una función
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Derivadas Parciales
+3.1 Funciones de dos o más variables en el dominio
+3.1.1 Gráfica en 3D y curvas de nivel
+3.2 Derivadas parciales
+3.2.1 Concepto
+3.2.2 Derivadas parciales de orden superior
+3.3 Diferencial total
+3.4 Derivadas de funciones implícitas
+
+N° UNIDAD TEMÁTICA: IV
+NOMBRE: Optimización libre y restringida en varias variables.
+4.1 Optimización libre
+4.1.1 Condiciones de primer orden
+4.1.2 Condiciones de segundo orden
+4.2 Optimización restringida: El método del multiplicador de Lagrange
+4.2.1 Condiciones de primer orden
+4.2.2 Condiciones de segundo orden
+
+N° UNIDAD TEMÁTICA: V
+NOMBRE: Integral definida e indefinida
+5.1 Integral indefinida
+5.1.1 Definición
+5.2 Técnicas de integración
+5.2.1 Inmediatas y trigonométricas directas (seno, coseno y tangente)
+5.2.2 Por sustitución
+5.2.3 Por partes
+5.3 Integral definida
+5.3.1 Definición
+5.3.2 Area bajo la curva
+5.3.3 Área entre curvas
+5.4 Integrales impropias
+5.4.1 Criterios de convergencia y divergencia
+
+---
+---
+
+MATERIA: Estadística y Probabilidad
+
+DESCRIPCIÓN GENERAL DE CONTENIDOS:
+I. Fundamentos de estadística
+II. Fundamentos de Probabilidad
+III. Distribución de variable aleatoria discreta
+IV. Distribución de variable aleatoria continua
+V. Distribuciones bivariadas discretas
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Fundamentos de estadistica
+1.1 Definición y conceptos básicos de Estadística
+1.1.1 Población, muestra, parámetro, estadístico, variable, variable aleatoria discreta, variable aleatoria continua
+1.1.2 Datos no agrupados y agrupados
+1.1.3 Distribución de frecuencias
+1.1.4 Presentaciones gráficas: histograma y ojiva
+1.2 Medidas de tendencia central
+1.2.1 Media
+1.2.2 Mediana
+1.2.3 Moda
+1.3 Medidas de dispersión
+1.3.1 Rango
+1.3.2 Desviación media absoluta
+1.3.3 Desviación estándar
+1.3.4 Varianza
+1.3.5 Coeficiente de variación
+1.4 Momentos con respecto a la media para datos agrupados y no agrupados: asimetría y curtosis
+1.5 Teorema de Chebyshev
+1.6 Definición, medida y construcción de números indices
+1.6.1 Indices simples (precio, cantidad, valor)
+1.6.2 Indices compuestos (precio, cantidad, valor)
+1.6.3 Indices ponderados (Laspeyres, Paasche y Fisher)
+1.6.4 INPC y cambio de periodo base
+1.6.5 Deflacionar series
+1.6.6 Inflación y poder de compra
+
+N° UNIDAD TEMÁTICA: II
+NOMBRE: Fundamentos de Probabilidad
+2.1 Técnica de conteo
+2.1.1 Principio fundamental del conteo. (diagrama de árbol)
+2.1.2 Permutaciones.
+2.1.3 Combinaciones.
+2.2 Definición y enfoques de probabilidad
+2.2.1 Experimento aleatorio, espacio muestral y eventos
+2.2.2 Enfoques subjetivo y enfoque objetivo
+2.3 Axiomas de probabilidad
+2.4 Probabilidad condicional
+2.4.1 Reglas de la multiplicación
+2.4.2 Teorema de Bayes.
+
+N° UNIDAD TEMÁTICA: III
+NOMBRE: Distribución de variable aleatoria discreta
+3.1 Definición
+3.2 Función de probabilidad
+3.3 Función de distribución acumulada
+3.4 Valor esperado y varianza
+3.4.1 Propiedades
+3.5 Distribuciones
+3.5.1 Uniforme
+3.5.2 Binomial y binomial generalizada
+3.5.3 Hipergeométrica
+3.5.4 Poisson
+
+N° UNIDAD TEMÁTICA: IV
+NOMBRE: Distribución de variable aleatoria continua
+4.1 Definición
+4.2 Función de densidad
+4.3 Función de distribución
+4.4 Valor esperado y varianza
+4.4.1 Propiedades
+4.5 Distribuciones
+4.5.1 Uniforme
+4.5.2 Normal
+4.5.3 "t" de Student
+
+N° UNIDAD TEMÁTICA: V
+NOMBRE: Distribuciones bivariadas discretas
+5.1 Distribuciones de probabilidad bivariadas
+5.1.1 Distribuciones marginales de probabilidad
+5.1.2 Independencia de variables aleatorias
+5.1.3 Probabilidad condicional de variables aleatorias
+5.1.4 El valor esperado de una función de dos variables aleatorias
+5.1.5 Propiedades de los valores esperados de dos variables aleatorias
+5.2 Medidas de relación entre dos variables aleatorias discretas
+5.2.1 Covarianza
+5.2.2 Correlación
+
+---
+---
+
+MATERIA: Econometría
+
+DESCRIPCIÓN GENERAL DE CONTENIDOS:
+I. Modelo de Regresión Lineal Simple.
+II. Modelo de Regresión Lineal Múltiple.
+III. Temas Adicionales del Modelo de Regresión Lineal Múltiple.
+IV. Heterocedasticidad.
+V. Variables Instrumentales
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Modelo de Regresión Lineal Simple.
+1.1 Definición del modelo clásico de regresión lineal.
+1.2 Supuestos del modelo clásico de regresión lineal.
+1.3 Estimación de parámetros por el método de MCO.
+1.4 Residuales y valores estimados.
+1.5 Bondad de ajuste: El criterio de la $R^{2}$
+1.6 Propiedades de los estimadores bajo muestra finita: Insesgamiento y eficiencia.
+1.7 Definiciones básicas sobre distribución asintótica. Ley de los grandes números.
+1.7.1
+1.7.2 Convergencia en probabilidad.
+1.7.3 Teorema del límite central.
+1.7.4 Teorema de Slutsky.
+1.8 Consistencia de los estimadores.
+
+N° UNIDAD TEMÁTICA: II
+NOMBRE: Modelo de Regresión Lineal Múltiple.
+2.1 La forma matricial del modelo de regresión lineal múltiple
+2.2 Extensión de los supuestos del modelo de regresión lineal.
+2.3 Estimación de los parámetros mediante MCO.
+2.4 Insesgamiento y varianza de los estimadores.
+2.5 Perturbaciones distribuidas normalmente.
+2.5.1 Pruebas de normalidad.
+2.5.2 El Teorema de Gauss-Markov.
+2.6 Distribución muestral de los estimadores.
+2.6.1 Prueba de hipótesis individual.
+2.6.2 Prueba conjunta.
+2.6.3 $R^{2}$ y $R^{2}$ ajustada.
+2.7 MCO restringidos y no restringidos.
+
+N° UNIDAD TEMÁTICA: III
+NOMBRE: Temas Adicionales del Modelo de Regresión Lineal Múltiple.
+3.1 Formas funcionales del modelo: Formas logaritmicas y polinómicas.
+3.2 Omisión de variables relevantes.
+3.3 Error de especificación.
+3.4 Problemas con los datos.
+3.4.1 Problemas con los estimadores bajo la presencia de multicolinealidad.
+3.4.2 Pruebas para detectar multicolinealidad:
+3.4.2.1 VIF (Factor Inflador de Varianzas)
+3.4.2.2 Condición de Número (Valores Propios)
+3.5 Análisis de regresión múltiple con información cualitativa (Dummy)
+3.5.1 Una sola variable binaria independiente.
+3.5.2 Uso de variables binarias en categorías múltiples.
+3.5.3 Interacción en las que intervienen variables binarias.
+3.6 Contrastes de cambio estructural
+
+N° UNIDAD TEMÁTICA: IV
+NOMBRE: Heterocedasticidad.
+4.1 Problemas en los estimadores de MCO por la presencia de heterocedasticidad.
+4.2 Pruebas para detectar la heterocedasticidad.
+4.2.1 La prueba Breusch-Pagan.
+4.2.2 La prueba White.
+4.3 Métodos de estimación eficientes cuando existe heterocedasticidad.
+4.3.1 Heterocedasticidad conocida: Mínimos Cuadrados Generalizados.
+4.3.2 Heterocedasticidad desconocida. Mínimos Cuadrados Factibles.
+4.4 Mínimos Cuadrados Robustos a la heterocedasticidad.
+
+N° UNIDAD TEMÁTICA: V
+NOMBRE: Variables Instrumentales
+5.1 Definición de variables exógenas y endógenas.
+5.2 Sesgo e inconsistencia de los estimadores de MCO bajo la presencia de variables endógenas.
+5.3 Prueba para detectar la presencia de variables endógenas.
+5.4 Estimadores por Minimos Cuadrados en Dos Etapas: MC2E
+5.5 Validez de los instrumentos: Exogeneidad y relevancia.
+5.6 Distribución muestral de los estimadores de MC2E.
+
+---
+---
+
+MATERIA: Estadística Inferencial
+
+DESCRIPCIÓN GENERAL DE CONTENIDOS:
+I. Distribución muestral.
+II. Estimación Puntual.
+III. Estimación por intervalo
+IV. Pruebas de hipótesis
+V. Asociación de variables aleatorias.
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Distribución muestral
+1.1 Definición de estadística inferencial
+1.1.1 Conceptos básicos: Población, muestra, parámetros y Estadístico
+1.2 Tipos de muestreo: Aleatorio simple, estratificado, sistemático y conglomerados
+1.2.1 Error de muestreo
+1.3 Introducción a distribuciones muéstrales
+1.3.1 El teorema del límite central
+1.4 Distribuciones muéstrales
+1.4.1 De la media muestral
+1.4.2 De la varianza muestral
+1.4.3 De la media muestral cuando la varianza poblacional es desconocida
+1.4.4 Del cociente de varianzas
+
+N° UNIDAD TEMÁTICA: II
+NOMBRE: Estimación Puntual
+2.1 Estimación puntual
+2.1.1 Definición
+2.1.2 Parámetros y estimadores
+2.2 Propiedades de un buen estimador
+2.2.1 Esperanza y varianza de un estimador
+2.2.2 Sesgo y error cuadrático medio (ecm)
+2.2.3 Eficiencia relativa
+2.2.4 Consistencia de un estimador
+2.2.5 Robustez de un estimador
+2.2.6 Método de Momentos
+
+N° UNIDAD TEMÁTICA: III
+NOMBRE: Estimación por intervalo
+3.1 Intervalos de Confianza
+3.1.1 Definición
+3.1.2 Componentes
+3.1.3 Interpretación
+3.2 Intervalo de confianza para la media
+3.2.1 Varianza poblacional conocida
+3.2.2 Varianza poblacional desconocida
+3.3 Intervalo de confianza para una proporción
+3.4 Intervalo de confianza para la varianza
+3.5 Intervalo de confianza para la diferencia de medias
+3.5.1 muestras independientes
+3.5.2 muestras dependientes
+3.6 Intervalos de confianza para la diferencia de proporciones
+3.7 Tamaño de muestra
+
+N° UNIDAD TEMÁTICA: IV
+NOMBRE: Pruebas de hipótesis
+4.1 Pruebas de hipótesis
+4.1.1 Definición
+4.1.2 Elementos de una prueba estadística
+4.1.3 Los riesgos de cometer errores en las pruebas de hipótesis
+4.2 Construcción de criterios para probar hipótesis
+4.2.1 Prueba de hipótesis para una media cuando la varianza es conocida
+4.2.2 Prueba de hipótesis de una media normal con varianza desconocida
+4.2.3 Prueba de hipótesis para una varianza
+4.2.4 Prueba para una proporción
+4.3 Nivel de significancia descriptivo o valor p
+
+N° UNIDAD TEMÁTICA: V
+NOMBRE: Asociación de variables aleatorias
+5.1 Prueba de análisis de varianza
+5.2 Tablas de contingencia
+5.2.1 Pruebas de hipótesis de bondad de ajuste
+5.2.2 Pruebas de hipótesis de independencia
+5.3 Comportamiento conjunto de dos variables aleatorias
+5.3.1 Covarianza de dos variables aleatorias
+5.3.2 Correlación entre dos variables aleatorias
+5.3.3 Pruebas de hipótesis del coeficiente de correlación
+
+---
+---
+
+
+MATERIA: Optimización Dinámica
+
+DESCRIPCIÓN GENERAL DE CONTENIDOS:
+I. Cálculo de Variaciones
+II. Extensiones y ampliaciones del Cálculo de Variaciones
+III. Control Optimo
+IV. Extensiones y ampliaciones del Control Optimo
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Cálculo de Variaciones
+1.1 Introducción: Métodos Básicos de Optimización Dinámica.
+1.2 Preliminares
+1.3 La Ecuación de Euler: condición necesaria.
+1.4 Casos Especiales.
+
+N° UNIDAD TEMÁTICA: II
+NOMBRE: Extensiones y ampliaciones del Cálculo de Variaciones
+2.1 La ecuación de Euler en el caso de varias variables.
+2.2 Condiciones de Transversalidad.
+2.2.1 Horizonte de tiempo fijo.
+2.2.2 Punto final fijo
+2.2.3 Curva terminal.
+2.3 Condiciones de suficiencia.
+2.3.1 La concavidad y convexidad del Funcional.
+2.3.2 La condición de Legendre
+2.4 Aplicaciones
+
+N° UNIDAD TEMÁTICA: III
+NOMBRE: Control Optimo
+3.1 La teoría del control óptimo
+3.2 Control óptimo: el caso de varias variables
+3.3 Condiciones de transversalidad
+3.4 El principio del máximo de Pontryagin
+
+N° UNIDAD TEMÁTICA: IV
+NOMBRE: Extensiones y ampliaciones del Control Optimo
+4.1 Condiciones de Suficiencia
+4.1.1 El Teorema de Mangasarian
+4.1.2 El Teorema de Suficiencia de Arrow.
+4.2 El Hamiltoniano a valor presente
+4.3 Problemas de Horizonte Infinito
+4.4 Aplicaciones
+4.5 Introducción a la programación dinámica
+
+---
+---
+
+MATERIA: Sistemas Dinámicos
+
+DESCRIPCIÓN GENERAL DE CONTENIDOS:
+I. Ecuaciones diferenciales de primer orden.
+II. Ecuaciones diferenciales de orden superior.
+III. Sistemas de ecuaciones diferenciales.
+IV. Estabilidad.
+V. Ecuaciones en diferencia.
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Ecuaciones diferenciales de primer orden
+1.1 Introducción
+1.2 Ecuaciones diferenciales de primer orden
+1.2.1 Ecuación diferencial lineal de primer orden.
+1.2.2 Ecuación de Bernoulli.
+1.3 El problema de valor inicial. El teorema de existencia y unicidad.
+1.4 Variables separables y homogéneas
+1.5 Estabilidad y diagrama de fase
+1.6 Aplicaciones a la economía
+
+N° UNIDAD TEMÁTICA: II
+NOMBRE: Ecuaciones diferenciales de orden superior
+2.1 Ecuaciones diferenciales de segundo orden.
+2.2 La base de la solución.
+2.3 Teorema de existencia y unicidad.
+2.4 Ecuaciones diferenciales de segundo orden con término variable.
+2.5 Ecuaciones diferenciales de orden superior.
+
+N° UNIDAD TEMÁTICA: III
+NOMBRE: Sistemas de Ecuaciones Diferenciales
+3.1 Sistemas de ecuaciones diferenciales lineales.
+3.2 Matrices exponenciales.
+3.3 Solución mediante el método de valores y vectores propios.
+3.4 Matrices no diagonalizables: la base de Jordan.
+3.5 Solución de sistemas no diagonalizables.
+3.6 Sistemas no homogéneos.
+3.7 Aplicaciones a la economía.
+
+N° UNIDAD TEMÁTICA: IV
+NOMBRE: Estabilidad
+4.1 Introducción
+4.2 Puntos críticos y estabilidad
+4.3 Estabilidad de sistemas lineales.
+4.4 Estabilidad de sistemas no lineales.
+4.5 Diagrama de fases.
+
+N° UNIDAD TEMÁTICA: V
+NOMBRE: Ecuaciones en Diferencia
+5.1 Ecuaciones en diferencia de primer orden.
+5.2 Ecuaciones en diferencia de orden superior.
+5.3 Sistemas de ecuaciones en diferencia.
+
+---
+---
+
+MATERIA: Teoría de Juegos
+
+DESCRIPCIÓN GENERAL DE CONTENIDOS:
+I. Introducción a la Teoría de juegos
+II. Modelos clásicos de Oligopolio
+III. Juegos de inducción hacia atrás
+IV. Juegos repetidos
+V. Juegos estáticos con información imperfecta
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Introducción a la Teoría de juegos
+1.1 Introducción.
+1.2 Representación de un juego normal.
+1.2.1 Juegos estáticos con información completa
+1.2.2 Juegos cooperativos y no cooperativos.
+1.2.3 Juegos con información completa, perfecta e incompleta.
+1.3 Juegos dinámicos con información completa.
+1.3.1 Solución del juego I: equilibrios en estrategias
+1.3.2 estrictamente dominantes.
+1.3.3 Solución del Juego II: Equilibrio de Nash.
+1.3.4 Eliminación iterativa de estrategias estrictamente dominantes.
+1.4 Ejercicios y prácticas
+
+N° UNIDAD TEMÁTICA: II
+NOMBRE: Modelos clásicos de Oligopolio
+2.1 Aplicaciones
+2.1.2 El modelo de duopolio de Cournot.
+2.2.2 El modelo de duopolio de Bertrand
+2.2.3 El modelo de Bertrand.
+2.2 Estrategias Mixtas y existencia de equilibrio
+2.2.1 Estrategias Mixtas
+2.2.2 Existencia de equilibrio de Nash
+2.3 Ejercicios y prácticas.
+
+N° UNIDAD TEMÁTICA: III
+NOMBRE: Juegos de inducción hacia atrás.
+3.1 Representación del Juego
+Inducción hacia atrás.
+3.1.2 El Modelo de Stackelberg.
+3.1.3 El Modelo de Liderazgo en Precios.
+3.2 Juegos en dos etapas con información completa pero imperfecta
+3.2.1 Perfección de Subjuegos
+3.3 Ejercicios y prácticas.
+
+N° UNIDAD TEMÁTICA: IV
+NOMBRE: Juegos repetidos
+4.1 Juegos repetidos
+4.1.1 Juegos repetidos de forma finita
+4.1.2 Juegos repetidos de forma infinita.
+4.1.3 Colusión entre duopolistas de Cournot
+4.2 Juegos Dinámicos con información completa pero imperfecta
+4.2.1 Juegos en forma extensiva
+4.2.2 Equilibrio de Nash perfecto en subjuegos
+4.3 Ejercicios y prácticas
+
+N° UNIDAD TEMÁTICA: V
+NOMBRE: Juegos estáticos con información imperfecta
+5.1 Solución del Juego: Equilibrio de Bayes - Nash Oligopolio
+5.2 Equilibrio bayesiano perfecto
+5.2.1 Juegos de señalización
+5.3 Aplicaciones del equilibrio bayesiano perfecto
+5.3.1 Juegos de Parloteo (cheap-talk games)
+5.3.2 Negociación sucesiva
+5.4 Refinamientos del equilibrio bayesiano perfecto
+5.5 Ejercicios
+
+---
+---
+
+MATERIA: Modelos Econométricos
+
+DESCRIPCIÓN GENERAL DE CONTENIDOS:
+I. Modelos de Variable Dependiente Limitada.
+II. Sistemas de Ecuaciones: Datos de Panel.
+III. Sistemas de Ecuaciones: Modelos SUR.
+IV. Sistemas de Ecuaciones Simultáneas.
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Modelos de Variable Dependiente Limitada
+1.1 El modelo de probabilidad Lineal.
+1.2 El método de estimación de máxima verosimilitud.
+1.2.1 Estimación de parámetros
+1.2.2 Propiedades de los estimadores: Sesgo y eficiencia
+1.3 El modelo Probit y Logit.
+1.3.1 Estimación
+1.3.2 Interpretación de los estimadores
+1.3.3 Pruebas de Hipótesis.
+1.3.4 Efectos Marginales
+1.4 Modelo de Regresión Censurada: El Modelo Tobit.
+1.5 Corrección de la Selección Muestral: El Método Heckit.
+
+N° UNIDAD TEMÁTICA: II
+NOMBRE: Sistemas de Ecuaciones: Datos de Panel
+2.1 La estructura de los modelos de Datos de Panel.
+2.2 Estimación de modelos con dos periodos.
+2.3 Estimación con Efectos Fijos.
+2.4 Estimación con Efectos Aleatorios.
+
+N° UNIDAD TEMÁTICA: III
+NOMBRE: Sistemas de Ecuaciones: Modelos Aparentemente No Relacionados (SUR)
+3.1 La estructura de los modelos multiecuacionales.
+3.2 Consecuencias de la heterocedasticidad y correlación cruzada.
+3.3 Estimación por el Método de Mínimos Cuadrados Factibles.
+
+N° UNIDAD TEMÁTICA: IV
+NOMBRE: Sistemas de Ecuaciones Simultáneas
+4.1 Los Modelos de Ecuaciones Simultáneas.
+4.1.1 La estructura de los modelos de ecuaciones simultáneas.
+4.1.2 El problema de la Identificación: Condición de orden y de Rango
+4.2 Estimación
+4.2.1 Método con Información Limitada: MC2E
+4.2.2 Método con Información Completa: MC3E
+4.3 Simulación
+4.3.1 Simulación ex-ante y ex-post.
+4.3.2 Evaluación a través del RMS y del U de Theil.
+4.3.3 Evaluación de la estabilidad.
+
+---
+---
+
+MATERIA: Series de Tiempo
+
+DESCRIPCIÓN GENERAL DE CONTENIDOS:
+I. Procesos Estacionarios: Modelos ARMA
+II. Procesos No-Estacionarios: Modelos ARIMA
+III. Metodología de Box-Jenkins
+IV. Modelos de Series de Tiempo Multiecuacionales
+V. Cointegración
+
+N° UNIDAD TEMÁTICA: I
+NOMBRE: Procesos Estacionarios: Modelos ARMA
+1.1 Definición de un proceso estocástico.
+1.1.1 Procesos estacionarios
+1.1.2 Función de autocorrelación
+1.2 Solución de ecuaciones en diferencia
+1.2.1 Ecuaciones en diferencia de primer orden.
+1.2.2 Ecuaciones en diferencia de orden superior.
+1.2.3 Condiciones de estabilidad.
+1.3 El proceso AR(1)
+1.3.1 Media y Varianza del proceso AR(1)
+1.3.2 Función de autocorrelación.
+1.3.3 Generalización del proceso AR(p)
+1.4 El proceso MA(1)
+1.4.1 Media y Varianza del proceso MA(1)
+1.4.2 Función de autocorrelación.
+1.4.3 Generalización del proceso MA(q)
+1.5 Introducción a los modelos ARMA(p,q)
+1.5.1 Función de autocorrelación.
+1.5.2 Función de autocorrelación parcial.
+
+N° UNIDAD TEMÁTICA: II
+NOMBRE: Procesos No-Estacionarios: Modelos ARIMA
+2.1 Series no estacionarias.
+2.1.1 Caminatas aleatorias, tendencias estacionarias y estocásticas.
+2.1.2 Problemas que causan los procesos no estacionarios.
+2.2 Pruebas de Detección de procesos no estacionarios.
+2.2.1 Prueba Dickey-Fuller.
+2.2.2 Prueba Phillips-Perron.
+2.2.3 Prueba Elliot-Stock-Rotenberg.
+2.2.4 Diferencia estacionaria y eliminación de tendencia estocástica.
+2.2.5 Pruebas de cambio estructural: Prueba Chow.
+
+N° UNIDAD TEMÁTICA: III
+NOMBRE: Metodología de Box-Jenkins
+3.1 Identificación por medio de la función de autocorrelación y autocorrelación parcial.
+3.2 Estacionalidad y estacionariedad.
+3.3 Estimación de los modelos ARMA y ARIMA.
+3.4 Criterios de Información: AIC y BIC.
+3.5 Prueba de Diagnóstico.
+3.6 Pronóstico
+
+N° UNIDAD TEMÁTICA: IV
+NOMBRE: Modelos de Series de Tiempo Multiecuacionales
+4.1 La estructura de los modelos VAR's
+4.1.1 Introducción al Proceso de Descomposición.
+4.1.2 Sistemas Sobre-identificados.
+4.2 Modelos VAR's
+4.2.1 Condiciones para un VAR estacionario.
+4.2.2 Identificación y Estimación.
+4.2.3 Función impulso-respuesta.
+4.2.4 Pronóstico
+
+N° UNIDAD TEMÁTICA: V
+NOMBRE: Cointegración
+5.1 Definición de cointegración.
+5.1.1 Vector de cointegración.
+5.1.2 Regresión espuria
+5.2 Vector de corrección de errores (VEC).
+5.3 Pruebas de Cointegración.
+5.3.1 Metodología de Engle-Granger.
+5.3.2 Metodología de Johansen.
+
+---
+---
+---

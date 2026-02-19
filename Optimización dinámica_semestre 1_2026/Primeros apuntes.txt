@@ -1,0 +1,665 @@
+Página 1
+
+Forma de evaluación
+70% examen
+10% guía (día del examen en hojas blancas)
+10% trabajo
+10% evaluación continua
+
+[Nota adhesiva]
+serrano.sanchez.cesar@gmail.com
+canal e insta
+@paqaprendas
+
+> REPASO
+
+1) d \frac{\sin 5t}{t^2} = \frac{(t^2)(5\cos 5t) - (\sin 5t)(2t)}{t^4}
+   d(\frac{u}{v}) = \frac{v u' - u v'}{v^2}
+
+2) d e^{2\cos 4t} = (2)(-4\sin 4t)e^{2\cos 4t} 
+                  = (-8\sin 4t)e^{2\cos 4t}
+   d(e^u) = u' e^u
+
+3) d \ln \sqrt{t} = \ln t^{1/2} = \frac{1/2 t^{-1/2}}{t^{1/2}} = \frac{\frac{1}{2\sqrt{t}}}{\frac{\sqrt{t}}{1}} = \frac{1}{2t}
+   d(\ln u) = \frac{u'}{u}
+
+4) d(2t^5 - 3t^{1/4} + \frac{1}{t}) = 10t^4 - \frac{3}{4} t^{-3/4} - \frac{1}{t^2}
+
+5) d -3(2t + \sin 5t)^4 = -12(2t + \sin 5t)^3 (5\cos 5t)
+   \frac{d}{dv} (v^n) = n v^{n-1} v'
+   [Nota del asistente: La alumna omitió la derivada de 2t en la regla de la cadena. El resultado correcto debería ser: -12(2t + \sin 5t)^3 (2 + 5\cos 5t)]
+
+6) d \sqrt{2 + 3e^{8t}} = d(2 + 3e^{8t})^{1/2} = \frac{1}{2}(2 + 3e^{8t})^{-1/2} (24e^{8t})
+                        = \frac{1}{2\sqrt{2 + 3e^{8t}}} (24e^{8t}) = \frac{24e^{8t}}{2\sqrt{2 + 3e^{8t}}}
+   \frac{d}{dv} (v^n) = n v^{n-1} v'
+
+7) d (5t - 2)(4t + 3\ln 8t) = (5t - 2)(4 + \frac{24}{8t}) + (4t + 3\ln 8t)(5)
+   d(uv) = uv' + vu'      = 20t + \frac{120t}{8t} - 8 - \frac{48}{8t} + 20t + 15\ln 8t
+                          = 40t + \frac{120t}{8t} - 8 - \frac{48}{8t} + 15\ln 8t
+   [Nota del asistente: La alumna no simplificó los términos centrales. 120t/8t es igual a 15, y 15 - 8 = 7. La expresión final simplificada sería: 40t + 7 - \frac{6}{t} + 15\ln 8t]
+
+8) d \frac{7t^2 - 5t + 9}{3t - 1} = \frac{(3t - 1)(14t - 5) - (7t^2 - 5t + 9)(3)}{(3t - 1)^2}
+   d(\frac{u}{v}) = \frac{v u' - u v'}{v^2}  = \frac{42t^2 - 15t - 14t + 5 - 21t^2 + 15t - 27}{(3t - 1)^2} = \frac{21t^2 - 14t - 22}{(3t - 1)^2}
+
+---
+---
+
+Página 2
+
+tarea <derivada parcial e implícita>
+
+• implícita
+se les dice así ya que variable no está despejada.
+
+$y' = \frac{dy}{dx}$ derivada de "y" con respecto a "x".
+
+[nota lateral de la alumna]:
+tengo revueltas las funciones inde y depe / función con la variable.
+cuando se encuentre a la función "y" -> $y'$ o $\frac{dy}{dx}$.
+
+ejemplo:
+obtener $\frac{dy}{dx}$ si $D(x^2y + y^2 = x^3)$.
+
+[análisis de asesor 🛑]: la notación $D(... = ...)$ es ambigua e incorrecta. la forma correcta de expresar el operador diferencial sobre la ecuación es $\frac{d}{dx}(x^2y + y^2) = \frac{d}{dx}(x^3)$.
+
+1ero derivas respecto a "x".
+$D(x^2y) + D(y^2) = D(x^3)$
+$x^2 \frac{dy}{dx} + 2xy + 2y \frac{dy}{dx} = 3x^2$
+
+[desarrollo algebraico ausente 🛠️]:
+1. 📌 aplicamos la regla del producto para $x^2y$: $\frac{d}{dx}(x^2) \cdot y + x^2 \cdot \frac{d}{dx}(y) = 2xy + x^2\frac{dy}{dx}$.
+2. 📌 derivamos $y^2$ con regla de la cadena: $2y\frac{dy}{dx}$.
+3. 📌 derivamos $x^3$: $3x^2$.
+4. 📌 igualamos: $2xy + x^2\frac{dy}{dx} + 2y\frac{dy}{dx} = 3x^2$. 
+
+2do paso despejas $\frac{dy}{dx}$.
+$\frac{dy}{dx}(x^2 + 2y) = 3x^2 - 2xy$
+$\frac{dy}{dx} = \frac{3x^2 - 2xy}{x^2 + 2y}$
+
+[desarrollo algebraico ausente 🛠️]:
+1. 📌 agrupamos términos con $\frac{dy}{dx}$ del lado izquierdo: $x^2\frac{dy}{dx} + 2y\frac{dy}{dx} = 3x^2 - 2xy$.
+2. 📌 factorizamos $\frac{dy}{dx}$ por término común: $\frac{dy}{dx}(x^2 + 2y) = 3x^2 - 2xy$.
+3. 📌 dividimos ambos lados entre $(x^2 + 2y)$ para despejar: $\frac{dy}{dx} = \frac{3x^2 - 2xy}{x^2 + 2y}$.
+
+• parciales
+$\frac{dy}{dx} = - \frac{F(x)}{F(y)}$
+
+[análisis de asesor 🛑]: error conceptual. $F(x)$ denota una función de una sola variable, no una derivada parcial. la fórmula del teorema de la función implícita exige derivadas parciales reales: $\frac{dy}{dx} = - \frac{F_x}{F_y}$ o $\frac{dy}{dx} = - \frac{\frac{\partial F}{\partial x}}{\frac{\partial F}{\partial y}}$.
+
+ejemplo:
+$F = x^3 - x^2y - y^2 = 0$
+
+en la parte de arriba derivas "ignorando" y.
+$\frac{dy}{dx} = - \frac{3x^2 - 2xy}{-x^2 - 2y}$
+y en la parte de abajo lo mismo pero con "x".
+
+*al final aplicas el signo ya sea en la parte de arriba o abajo.
+
+[desarrollo algebraico ausente 🛠️]:
+1. 📌 calculamos $F_x$ derivando respecto a $x$ y asumiendo $y$ constante: $\frac{\partial}{\partial x}(x^3 - x^2y - y^2) = 3x^2 - 2xy - 0 = 3x^2 - 2xy$.
+2. 📌 calculamos $F_y$ derivando respecto a $y$ y asumiendo $x$ constante: $\frac{\partial}{\partial y}(x^3 - x^2y - y^2) = 0 - x^2(1) - 2y = -x^2 - 2y$.
+3. 📌 sustituimos en la fórmula general: $\frac{dy}{dx} = - \frac{3x^2 - 2xy}{-x^2 - 2y}$.
+4. 📌 la alumna dejó la simplificación a medias. al multiplicar los signos en el denominador, el resultado final es: $\frac{dy}{dx} = \frac{3x^2 - 2xy}{x^2 + 2y}$.
+
+>ejercicios de d.p.
+$F = x^2 - y^2 - 2x - 4y$
+
+---
+---
+
+Página 3
+
+> Introducción derivadas parciales e implícitas         09  02  2026
+
+[Recuadro amarillo izquierdo]
+IMPLÍCITAS:
+f(x) = x^2  ->  f'(x) = 2x     |  x = t^2
+y = x^2     ->  y' = 2x        |  0 = t^2 - x
+0 = x^2 - y ->  0 = 2x - y'    |  0 = 2t - \dot{x}
+
+[Recuadro amarillo derecho]
+(x) siempre es función que depende del tiempo
+si la potencia está elevada a más de 3 se empieza a escribir con números romanos.
+[Nota del asistente: La alumna confunde "potencia" con el "orden de la derivada". Debería decir: "si el orden de la derivada es mayor a 3..."]
+
+ejemplos:
+1) \frac{d}{dt} 4t^5 - 7x + 2 = 20t^4 - 7\dot{x}
+
+2) d 3x + 5t - 2\sin 4x = 3\dot{x} + 5 - 8\dot{x}\cos 4x
+
+3) d \frac{3x - 2}{5x + 1} = \frac{(5x + 1)(3\dot{x}) - (3x - 2)(5\dot{x})}{(5x + 1)^2}
+
+ejercicio:
+1) d 2\ln(3x) = \frac{6\dot{x}}{3x} = \frac{2\dot{x}}{x}
+
+2) d \frac{\sin 5x}{\cos 3t^2} = \frac{(\cos 3t^2)(5\dot{x}\cos 5x) - (\sin 5x)(-6t\sin 3t^2)}{\cos^2 3t^2}
+
+3) 8x^3 = 24\dot{x}x^2
+
+4) d \frac{3t}{x} = \frac{(x)(3) - (3t)(\dot{x})}{x^2} = \frac{3x - 3t\dot{x}}{x^2}
+
+5) d (2x - 3)(5x + 2) = (2x - 3)(5\dot{x}) + (5x + 2)(2\dot{x})
+
+6) d \frac{3x + 1}{5x - 4t} = \frac{(5x - 4t)(3\dot{x}) - (3x + 1)(5\dot{x} - 4)}{(5x - 4t)^2}
+
+7) d \frac{2xt^4}{3} = (\frac{2}{3}) x t^4 = (\frac{2}{3}) 4\dot{x}t^3 = \frac{8\dot{x}t^3}{3}
+[Nota del asistente: Grave error algebraico. La alumna derivó t^4 como 4t^3 y le asignó el punto de derivada a la x arbitrariamente, ignorando que "x" es función de "t". 
+Aplicando la regla del producto (uv' + vu'), el resultado correcto es: \frac{2}{3}(\dot{x}t^4 + 4xt^3)]
+
+8) \frac{3\ddot{x}}{2} - \frac{5\dot{x}}{2} + 4x^{IV} = \frac{3\ddot{x} - 5\dot{x} + 4}{2}
+[Nota del asistente: Error de simplificación. Al intentar hacer un denominador común, la alumna desapareció por completo la variable x^{IV}. El numerador correcto sobre 2 debería ser: 3\ddot{x} - 5\dot{x} + 8x^{IV}]
+
+9) d \frac{2(3x + 4)^7}{5} = \frac{2(7)(3x + 4)^6(3\dot{x})}{5} = \frac{14(3x + 4)^6(3\dot{x})}{5} = \frac{42\dot{x}(3x + 4)^6}{5}
+
+---
+---
+
+Página 4
+
+tarea: derivadas implícitas
+
+1) d 7t^4x - 8x^2 = 7(4)t^3\dot{x} - 8\dot{x}x = 28t^3\dot{x} - 8\dot{x}x
+[Nota del asistente: Grave error en el primer término. Omitió la regla del producto para (t^4)(x) e inventó la derivada. Además, la derivada de -8x^2 es -16x\dot{x}, no -8\dot{x}x.
+El resultado correcto debe ser: (28t^3x + 7t^4\dot{x}) - 16x\dot{x}]
+
+2) 3x^2 + 7t - 2x^4 = 6\dot{x}x + 7 - 8\dot{x}x^3
+
+3) 3e^{5x} + 4e^{8x} = 3(5\dot{x}) e^{5x} + 4(8\dot{x}) e^{8x} = 15\dot{x} e^{5x} + 32\dot{x} e^{8x}
+
+4) 2\sin 7\dot{x} = 2(7\ddot{x})\cos 7\dot{x} = 14\ddot{x}\cos 7\dot{x}
+
+5) d \frac{5\dot{x} + 2t^4}{x} = \frac{(x)(5\ddot{x} + 8t^3) - (5\dot{x} + 2t^4)(\dot{x})}{x^2}
+
+6) d (\dot{x} - 3x^4)^3 = 3(\dot{x} - 3x^4)^2 (\ddot{x} - 12\dot{x}x^3)          [Nota lateral de la alumna]: \ddot{x} solo son \ddot{x}
+
+7) d 5(4t - 2x)^2 = 10(4t - 2x)(4 - 2\dot{x})
+
+8) d \frac{8x - 4}{5\dot{x} + 3} = \frac{(5\dot{x} + 3)(8\dot{x}) - (8x - 4)(5\ddot{x})}{(5\dot{x} + 3)^2}
+
+9) \ln (3x - x) = \frac{3\dot{x} - \dot{x}}{3x - x}
+[Nota del asistente: El cálculo es correcto según la regla de la cadena, pero carece de simplificación previa. \ln(3x - x) es \ln(2x), por lo que la derivada simplificada es simplemente \frac{2\dot{x}}{2x} = \frac{\dot{x}}{x}]
+
+10) d 4e^{7x - 2t} = 4(7\dot{x} - 2) e^{7x - 2t} = 28\dot{x} - 8 e^{7x - 2t}
+[Nota del asistente: Error de agrupación. Al multiplicar por 4, la alumna eliminó los paréntesis. El exponente multiplica a todo el binomio. El resultado final correcto es: (28\dot{x} - 8) e^{7x - 2t}]
+
+11) d \ln (3x - 5\dot{x} + 3t^2) = \frac{3\dot{x} - 5\ddot{x} + 6t}{3x - 5\dot{x} + 3t^2}
+
+12) d \sqrt{2x - 3t} = d (2x - 3t)^{1/2} = 1/2 (2x - 3t)^{-1/2} (2\dot{x} - 3) = (2x - 3t)^{-1/2} (\dot{x} - 3/2)
+
+---
+---
+
+Página 5
+
+parciales:                                       11   02   2026
+
+[Nota adhesiva]
+Las constantes dividiendo o multiplicando ahí lo dejas NO le haces nada y derivas lo demás!
+
+f(x, y) = 4x - 5y^2
+\frac{\partial f}{\partial x} = f_x = 4    <-- esta ocuparemos
+\frac{\partial f}{\partial y} = f_y = -10y
+
+• ejercicios:
+
+1) f(x, y) = 7x^4 - 5y^2 + 4xy
+   f_x = 28x^3 + 4y
+   f_y = -10y + 4x
+
+2) f(x, y) = \sqrt{2x - 3y}
+   f_x = (2x - 3y)^{1/2} = 1/2(2x - 3y)^{-1/2}(2) = (2x - 3y)^{-1/2}
+   f_y = (2x - 3y)^{1/2} = 1/2(2x - 3y)^{-1/2}(-3) = -3/2(2x - 3y)^{-1/2}
+
+3) f(x, y, z) = \frac{5x + 3y}{z}
+   [Nota lateral de la alumna]: ¿subir la z?
+   f_x = 5/z
+   f_y = 3/z
+   f_z = 
+   [Nota del asistente: La alumna dejó f_z en blanco. Resolviendo su duda de "subir la z", la función reescrita es (5x + 3y)z^{-1}. Aplicando la regla de la potencia, la derivada parcial respecto a z es: f_z = -(5x + 3y)z^{-2} = -\frac{5x + 3y}{z^2}]
+
+4) f(x, y, z) = 2x(3y - z)^3
+   [Nota de la alumna apuntando a 2x]: no es función, es constante.
+   [Nota de la alumna apuntando a (3y-z)^3]: no ocupas u*v
+   f_x = 2(3y - z)^3
+   f_y = 18x(3y - z)^2
+   f_z = -6x(3y - z)^2
+
+5) f(x, y, z) = 2e^{5x} + 3\cos(2z) - 2x \ln(3y)
+   f_x = 10xe^{5x} - 2\ln(3y)
+   [Nota del asistente: Error de derivación en el primer término de f_x. La derivada de 2e^{5x} es 10e^{5x}; la "x" que añadió está de más. El resultado correcto es: f_x = 10e^{5x} - 2\ln(3y)]
+   f_y = \frac{-2x(3)}{3y} = -\frac{6x}{3y}
+   f_z = -6\sin(2z)
+
+Funciones objetivo
+
+J(t, x, \dot{x}) = 2t - x + 3\dot{x}
+
+[Columna 1]
+f = 2t - x + 3\dot{x}
+f_x = -1
+f_{\dot{x}} = 3
+f_{\dot{x}t} = 0
+[Nota del asistente: A partir de aquí, la alumna utiliza la notación f_{\dot{x}t}. En el contexto de optimización dinámica, no se refiere a una simple derivada parcial cruzada, sino a la derivada total respecto al tiempo de la derivada parcial: \frac{d}{dt}(\frac{\partial f}{\partial \dot{x}}). Este es el segundo término de la Ecuación de Euler.]
+
+[Columna 2]
+f = 5tx - 4\dot{x} + \dot{x}^2
+f_x = 5t
+f_{\dot{x}} = -4 + 2\dot{x}
+f_{\dot{x}t} = 2\ddot{x}
+
+[Columna 3]
+f = x^2 - \dot{x}^2
+f_x = 2x
+f_{\dot{x}t} = -2\ddot{x}
+[Nota del asistente: Aquí omitió escribir el paso intermedio. Primero se obtiene f_{\dot{x}} = -2\dot{x}, y al derivar eso respecto al tiempo se llega correctamente a f_{\dot{x}t} = -2\ddot{x}.]
+
+---
+---
+
+Página 6
+
+¡repetir!
+ejercicios:
+
+[Nota adhesiva rosa]
+f_x
+f_{\dot{x}}   } estas van derivadas de forma NORMAL
+f_{\dot{x}t} -> la única que modifica puntos es esta derivada porque es respecto al tiempo!
+
+[Nota lateral derecha]
+x -> función respecto al tiempo
+
+1) f = 7x\dot{x} - 2t^2x + \dot{x}^2
+   f_x = 7\dot{x} - 2t^2
+   f_{\dot{x}} = 7x + 2\dot{x}      [Nota de la alumna]: con respecto a f_{\dot{x}}
+   f_{\dot{x}t} = 7\dot{x} + 2\ddot{x}
+
+2) f = 4x - \sin 2x + 5\dot{x}^2
+   f_x = -8\cos 2x
+   [Nota del asistente: Error grave de derivación. La derivada parcial de 4x es 4, y la de -\sin 2x es -2\cos 2x. El resultado correcto es f_x = 4 - 2\cos 2x. La alumna multiplicó en lugar de derivar término a término.]
+   f_{\dot{x}} = 10\dot{x}
+   f_{\dot{x}t} = 10\ddot{x}
+
+3) f = \frac{\dot{x}^2 - x^3}{2}
+   f_x = -3/2 x^2
+   f_{\dot{x}} = 2\dot{x} / 2 = \dot{x}
+   f_{\dot{x}t} = \ddot{x}
+
+4) f = 3\dot{x} - 2\dot{x}^2 + \frac{4}{t}
+   f_x = 0
+   f_{\dot{x}} = 3 - 4\dot{x}
+   f_{\dot{x}t} = 3\ddot{x} - 4\ddot{x}
+   [Nota del asistente: Error conceptual. La derivada de una constante (3) respecto al tiempo es 0, por lo que el término 3\ddot{x} no existe. El resultado correcto es f_{\dot{x}t} = -4\ddot{x}.]
+
+5) f = 5\dot{x}t + 4x - 2e^{3x}
+   f_x = 
+   f_{\dot{x}} = 
+   f_{\dot{x}t} = 
+   [Nota del asistente: Ejercicio en blanco. Las respuestas correctas son:
+   f_x = 4 - 6e^{3x}
+   f_{\dot{x}} = 5t
+   f_{\dot{x}t} = 5]
+
+6) f = \ln x - 3t\dot{x} + 4\dot{x}^2
+   f_x = 
+   f_{\dot{x}} = 
+   f_{\dot{x}t} = 
+   [Nota del asistente: Ejercicio en blanco. Las respuestas correctas son:
+   f_x = 1/x
+   f_{\dot{x}} = -3t + 8\dot{x}
+   f_{\dot{x}t} = -3 + 8\ddot{x}]
+
+--------------------------------------------------
+[Segunda mitad de la página]
+
+1) f = 4\dot{x}^2 - 5x^2 + 3\dot{x}t^4
+   f_x = -10x
+   f_{\dot{x}} = 8\dot{x} + 3t^4
+   f_{\dot{x}t} = 8\ddot{x} + 12t^3
+
+2) f = 2\dot{x}x - 4\dot{x}^2 + 3x
+   f_x = 2\dot{x} + 3
+   f_{\dot{x}} = 2x - 8\dot{x}
+   f_{\dot{x}t} = -8\ddot{x} + 2\dot{x}
+
+3) f = 6\dot{x} - 5\dot{x}^2 + 7tx
+   f_x = 7t
+   f_{\dot{x}} = 6 - 10\dot{x}
+   f_{\dot{x}t} = -10\ddot{x}
+
+4) f = 8\dot{x} - 5x^2 + 3\dot{x}^2 - 2x\dot{x}
+   f_x = -10x - 2\dot{x}
+   f_{\dot{x}} = 8 + 6\dot{x} - 2x
+   f_{\dot{x}t} = 6\ddot{x} + 2\dot{x}
+   [Nota del asistente: Error de signo. Al derivar f_{\dot{x}} respecto al tiempo, la derivada de -2x es -2\dot{x}, no positivo. El resultado correcto es f_{\dot{x}t} = 6\ddot{x} - 2\dot{x}.]
+
+5) f = 4t^2x - 5\dot{x}^2 + 3t^3\dot{x} - 7x
+   f_x = 4t^2 - 7
+   f_{\dot{x}} = -10\dot{x} + 3t^3
+   f_{\dot{x}t} = -10\ddot{x} + 9t^2
+
+6) f = 6\dot{x} - 5\dot{x}^3 + 4\dot{x}^4 - 2e^{3t}\dot{x}
+   f_x = 0
+   f_{\dot{x}} = -15\dot{x}^2 + 16\dot{x}^3 - 2e^{3t} + 6
+   f_{\dot{x}t} = -30\dot{x}\ddot{x} + 48\dot{x}^2\ddot{x} - 6e^{3t}
+
+---
+---
+
+Página 7
+
+Tarea: funciones óptimas
+
+1) f = 5x\ln\dot{x} + 4xt^3 - 2xe^{5t}
+   f_x = 5\ln\dot{x} + 4t^3 - 2e^{5t}
+   f_{\dot{x}} = \frac{5x}{\dot{x}} + 4t^3
+   [Nota del asistente: Error en f_{\dot{x}}. La derivada parcial de 4xt^3 respecto a \dot{x} es 0. El + 4t^3 sobra.]
+   [Nota de la alumna apuntando a la regla del cociente]: es la de división
+   f_{\dot{x}t} = \frac{(5\dot{x})(\dot{x}) - (\ddot{x})(5x)}{(\dot{x})^2} + 12t^2
+   [Nota del asistente: Aplicó la regla del cociente para \frac{5x}{\dot{x}}, pero arrastró el error anterior derivando 4t^3 como 12t^2. En el numerador de la división, el orden es correcto, quedando \frac{5\dot{x}^2 - 5x\ddot{x}}{\dot{x}^2}.]
+
+2) f = \dot{x}\sin 4t - \dot{x}\ln 3t
+   f_x = 0
+   f_{\dot{x}} = \sin 4t - \ln 3t
+   f_{\dot{x}t} = 4\cos 4t - \frac{3}{3t} = 4\cos 4t - \frac{1}{t}
+
+3) f = 2\dot{x}^2 - 5x^2 + 3xe^{2t}
+   f_x = -10x + 3e^{2t}
+   f_{\dot{x}} = 4\dot{x}
+   f_{\dot{x}t} = 4\ddot{x}
+
+4) f = 8t\dot{x} + 4\dot{x}^2 - 5e^{3t}\dot{x}
+   f_x = 0
+   f_{\dot{x}} = 8t + 8\dot{x} - 5e^{3t}
+   f_{\dot{x}t} = 8 + 8\ddot{x} - 15e^{3t}
+
+5) f = \frac{2\dot{x}}{t} - 4x^2 + 3t\dot{x}
+   f_x = -8x
+   f_{\dot{x}} = \frac{2}{t} + 3t
+   f_{\dot{x}t} = 3
+   [Nota del asistente: Error grave. Omitió por completo derivar el primer término (\frac{2}{t}) respecto al tiempo. La derivada de 2t^{-1} es -2t^{-2}. El resultado correcto es f_{\dot{x}t} = -\frac{2}{t^2} + 3.]
+
+6) f = 2\dot{x}e^{5t} + 4tx^4 - 2\dot{x}^2
+   f_x = 4t(4x^3) = 16tx^3
+   f_{\dot{x}} = 2e^{5t} - 4\dot{x}
+   f_{\dot{x}t} = 10e^{5t} - 4\ddot{x}
+
+7) f = 3\dot{x}^2 + 5x^3 + 4x\dot{x}
+   f_x = 15x^2 + 4\dot{x}
+   f_{\dot{x}} = 6\dot{x} + 15x^2 + 4x
+   [Nota del asistente: Error de atención. La derivada parcial de 5x^3 respecto a \dot{x} es 0. El 15x^2 es incorrecto aquí.]
+   f_{\dot{x}t} = 6\ddot{x} + 30x\dot{x} + 4\dot{x}
+   [Nota del asistente: Arrastró su error anterior derivando 15x^2 respecto al tiempo como 30x\dot{x}. El resultado correcto limpio es f_{\dot{x}t} = 6\ddot{x} + 4\dot{x}.]
+
+8) f = 2x(\dot{x}) + 3x^2\dot{x}
+   f_x = 2\dot{x} + 6x\dot{x}
+   f_{\dot{x}} = 2x^2 + 3x^2
+   [Nota del asistente: Error de la alumna al transcribir. La derivada de 2x\dot{x} respecto a \dot{x} es 2x, no 2x^2.]
+   f_{\dot{x}t} = 4x\dot{x} + 6x\dot{x}
+   [Nota del asistente: Intentó derivar erróneamente su 2x^2 como 4x\dot{x}. El resultado correcto partiendo de un f_{\dot{x}} = 2x + 3x^2 sería f_{\dot{x}t} = 2\dot{x} + 6x\dot{x}.]
+
+9) f = \dot{x}\ln x + 3\sin x
+   f_x = \frac{\dot{x}}{x} + 3\cos x
+   f_{\dot{x}} = \ln x
+   f_{\dot{x}t} = \frac{\dot{x}}{x}
+
+10) f = 5x^2 - 3\dot{x}^2 + 8e^{3t}\dot{x}^2
+    f_x = 10x
+    f_{\dot{x}} = -6\dot{x} + 8e^{3t}(2\dot{x})      [Nota de la alumna]: u v y simplificar
+    f_{\dot{x}t} = -6\ddot{x} + (8e^{3t})(2\ddot{x}) - (2\dot{x})(24e^{3t})
+    [Nota del asistente: Al aplicar la regla del producto (uv)' = u'v + uv' en el segundo término, el signo que separa los factores debe ser positivo (+), no negativo. El resultado correcto es -6\ddot{x} + 16e^{3t}\ddot{x} + 48e^{3t}\dot{x}.]
+
+11) f = t\dot{x}^2 + 5\dot{x} + 3(x - \dot{x})
+    [Nota de la alumna apuntando a este ejercicio]: repetir esta
+    f_x = -3\dot{x}
+    [Nota del asistente: Totalmente incorrecto. El término es 3x - 3\dot{x}. La derivada respecto a x es simplemente 3.]
+    f_{\dot{x}} = t\cdot 2\dot{x} + 5 + 3x
+    [Nota del asistente: Incorrecto. La derivada respecto a \dot{x} de 3(x - \dot{x}) es -3. Debería ser 2t\dot{x} + 5 - 3 = 2t\dot{x} + 2.]
+    f_{\dot{x}t} = (t)(2\ddot{x}) - (2\dot{x})(1) + 3\dot{x}
+    [Nota del asistente: La regla del producto de t(2\dot{x}) lleva signo positivo, no negativo. Con los errores anteriores corregidos, el resultado final es f_{\dot{x}t} = 2t\ddot{x} + 2\dot{x}.]
+
+---
+---
+
+Página 8
+
+Repaso de integrales                             13   02   2026
+
+Formulas:
+\int dt = t + c
+\int a dt = a \int dt = at + c (en la operación principal)
+\int u + v - w dt = \int u dt + \int v dt - \int w dt
+\int t^n dt = \frac{t^{n+1}}{n+1} + c \quad \forall n \neq -1    <-- [Nota de la alumna]: las más importantes
+\int t^{-1} dt = \int \frac{dt}{t} = \ln t + c                    <-- [Nota de la alumna]: las más importantes
+
+ejemplos:
+
+1) \int 8t^2 - 5t + 2 dt = \frac{8t^3}{3} - \frac{5t^2}{2} + 2t + c
+
+2) \int \frac{7t^5 - 5t^2 + 4t}{4} dt = \frac{1}{4} ( \frac{7t^6}{6} - \frac{5t^3}{3} + \frac{4t^2}{2} ) + c
+
+3) \int \frac{8(4t - 2)}{5} dt = \frac{8}{5} \int 4t - 2 dt = \frac{8}{5} ( \frac{4t^2}{2} - 2t ) + c
+
+4) \int \frac{3t^2 - 5t + 1}{t} dt = \int \frac{3t^2}{t} - \frac{5t}{t} + \frac{1}{t} dt = \int 3t - 5 + \frac{1}{t} dt = \frac{3t^2}{2} - 5t + \ln t + c
+
+5) \int (2t + 1)^2 dt = \int 4t^2 + 2t + 1 dt = \frac{4t^3}{3} + \frac{2t^2}{2} + t + c
+   [Nota de la alumna apuntando al binomio]: desarrollas el cuadrado
+   [Nota del asistente: Error algebraico al desarrollar el binomio al cuadrado. El desarrollo de (2t + 1)^2 es 4t^2 + 4t + 1, no 4t^2 + 2t + 1. Por lo tanto, la integración correcta debe ser \frac{4t^3}{3} + \frac{4t^2}{2} + t + c = \frac{4t^3}{3} + 2t^2 + t + c.]
+
+ejercicios:
+
+1) \int \frac{8t(3t - 1)}{2} dt = 1/2 \int 8t(3t - 1) dt = 1/2 \int 24t^2 - 8t dt 
+                                = 1/2 ( \frac{24t^3}{3} - \frac{8t^2}{2} ) + c
+                                = 1/2 ( 8t^3 - 4t^2 ) + c
+
+2) \int \frac{4t - 2}{5} + \frac{3t - 4}{3} dt = 1/5 ( \frac{4t^2}{2} - 2t ) + 1/3 ( \frac{3t^2}{2} - 4t ) + c
+
+
+---
+---
+
+Página 9
+
+3) \int \frac{5t - 2}{7t} dt = \int \frac{5t}{7t} - \frac{2}{7t} dt = 5/7 \int dt - 2/7 \int \frac{dt}{t} = 5/7 t - 2/7 \ln t + c
+
+4) \int \frac{3t^{-5} + 2t + t^{1/3}}{4} dt = 1/4 ( \frac{3t^{-4}}{-4} + \frac{2t^2}{2} + \frac{t^{4/3}}{4/3} ) + c
+   [Nota del asistente: La integración es correcta, pero la alumna dejó el resultado sin simplificar. Para futuras operaciones, lo ideal sería simplificar las fracciones complejas: 1/4 ( -3/4 t^{-4} + t^2 + 3/4 t^{4/3} ) + c = -3/16 t^{-4} + 1/4 t^2 + 3/16 t^{4/3} + c.]
+
+5) \int
+   [Nota del asistente: Ejercicio dejado en blanco.]
+
+[Recuadro medio derecho]
+sen = -cos
+cos = sen
+[Nota del asistente: Regla mnemotécnica rápida de la alumna para recordar los signos de las integrales trigonométricas: \int \sin x dx = -\cos x y \int \cos x dx = \sin x.]
+
+• integral por cambio de variable
+se ocupa para transformar las integrales a unas que tienen formula directa.
+
+\int 2t(t^2 + 5)^3 dt = \int u^3 du = \frac{u^4}{4} + c = \frac{(t^2 + 5)^4}{4} + c
+u = t^2 + 5  -> siempre agrega la constante.
+du = 2t dt
+
+\int e^{4t} dt = 1/4 \int e^u du = 1/4 e^u + c = 1/4 e^{4t} + c
+u = 4t
+du = 4 dt
+[Nota de la alumna apuntando a la conversión del diferencial]: multiplica pasa dividiendo
+
+\int e^{t/2} dt = 2 \int e^u du
+u = t/2
+du = 1/2 dt
+[Nota de la alumna apuntando a la conversión del diferencial]: divide pasa multi.
+
+[Nota de la alumna en el centro, apuntando a los dos ejemplos de exponenciales]: se hacen mentales
+
+[Texto escrito en diagonal en la esquina inferior derecha]
+Integral por partes y método tabulado
+
+
+---
+---
+
+Página 10
+
+Repaso de álgebra e integración por sustitución y división polinomial
+Lunes 16 de febrero
+
+1) $\int \frac{\cos 2t}{3 \sin 2t - 9} dt$
+[Nota de asesor: La alumna escribe $\ln c + c$, lo cual no tiene sentido analítico. El desarrollo correcto es el siguiente.]
+🔄 Paso 1: Cambio de variable. $u = 3\sin 2t - 9$
+📉 Paso 2: Derivar $u$. $du = 3(\cos 2t)(2) dt = 6\cos 2t dt$
+✂️ Paso 3: Despejar el diferencial. $\cos 2t dt = \frac{du}{6}$
+🧩 Paso 4: Sustituir en la integral original. $\int \frac{1}{u} \frac{du}{6} = \frac{1}{6} \int \frac{du}{u}$
+🏁 Paso 5: Integrar y regresar a $t$. $\frac{1}{6} \ln|u| + c = \frac{1}{6} \ln|3\sin 2t - 9| + c$
+
+Regla anotada: en una integral si tienes una fracción de polinomios y el grado del numerador es mayor o igual al denominador, se resolverá por división algebraica.
+
+2) $\int \frac{3t - 2}{t + 4} dt$
+➗ Paso 1: División polinomial $(3t - 2) \div (t + 4)$. El cociente es $3$. Multiplicamos $3(t + 4) = 3t + 12$.
+➖ Paso 2: Restar para obtener el residuo. $(3t - 2) - (3t + 12) = -14$.
+🔄 Paso 3: Reescribir integral. $\int \left( 3 - \frac{14}{t + 4} \right) dt$
+🏁 Paso 4: Integrar separando términos. $3t - 14\ln|t + 4| + c$
+
+3) $\int \frac{5t - 1}{3t + 2} dt$
+➗ Paso 1: División polinomial $(5t - 1) \div (3t + 2)$. El cociente es $\frac{5}{3}$. Multiplicamos $\frac{5}{3}(3t + 2) = 5t + \frac{10}{3}$.
+➖ Paso 2: Restar. $(5t - 1) - (5t + \frac{10}{3}) = -1 - \frac{10}{3} = -\frac{13}{3}$.
+🔄 Paso 3: Reescribir integral. $\int \left( \frac{5}{3} - \frac{13/3}{3t + 2} \right) dt$
+🧩 Paso 4: Integrar por cambio de variable el segundo término ($u = 3t + 2 \rightarrow du = 3 dt$). 
+🏁 Paso 5: Resultado. $\frac{5}{3}t - \frac{13}{3} \left( \frac{1}{3} \right) \ln|3t + 2| + c = \frac{5}{3}t - \frac{13}{9}\ln|3t + 2| + c$
+
+4) $\int \frac{3t^2 + 7t + 2}{2t - 1} dt$
+[Nota de asesor: La alumna deja la división a medias. El desarrollo completo es obligatorio.]
+➗ Paso 1: Primer término del cociente. $3t^2 \div 2t = \frac{3}{2}t$. 
+➖ Paso 2: Multiplicar y restar. $(3t^2 + 7t) - (\frac{3}{2}t)(2t - 1) = 3t^2 + 7t - 3t^2 + \frac{3}{2}t = \frac{17}{2}t$. Bajamos el $2$.
+➗ Paso 3: Segundo término del cociente. $\frac{17}{2}t \div 2t = \frac{17}{4}$.
+➖ Paso 4: Multiplicar y restar. $(\frac{17}{2}t + 2) - (\frac{17}{4})(2t - 1) = \frac{17}{2}t + 2 - \frac{17}{2}t + \frac{17}{4} = 2 + \frac{17}{4} = \frac{25}{4}$.
+[La continuación pasa a la siguiente página].
+
+
+---
+---
+
+Página 11
+
+🔄 Paso 5 (continuación): Reescribir la integral con cociente y residuo. 
+$\int \left( \frac{3}{2}t + \frac{17}{4} + \frac{25/4}{2t - 1} \right) dt$
+🧩 Paso 6: Integrar término a término. Para el residuo, $u = 2t - 1 \rightarrow du = 2 dt$.
+🏁 Paso 7: Resultado final. $\frac{3}{2} \left( \frac{t^2}{2} \right) + \frac{17}{4}t + \frac{25}{4} \left( \frac{1}{2} \right) \ln|2t - 1| + c = \frac{3}{4}t^2 + \frac{17}{4}t + \frac{25}{8}\ln|2t - 1| + c$
+
+Método tabular (Integración por partes múltiple)
+
+1) $\int t e^{-2t} dt$
+[Nota de asesor: La alumna omite la escritura inicial de la integral, asumo $t$ por sus derivadas. El cuadro es deficiente. Construcción correcta:]
+📉 $u$ (Derivar) | 📈 $dv$ (Integrar) | Signo
+$t$ | $e^{-2t}$ | $(+)$
+$1$ | $-\frac{1}{2}e^{-2t}$ | $(-)$
+$0$ | $\frac{1}{4}e^{-2t}$ | $(+)$
+🏁 Resultado multiplicando diagonales: $-t \left( \frac{1}{2}e^{-2t} \right) - (1) \left( \frac{1}{4}e^{-2t} \right) + c = -\frac{1}{2}t e^{-2t} - \frac{1}{4}e^{-2t} + c$
+
+2) $\int t^2 e^{t/3} dt$
+📉 $u$ (Derivar) | 📈 $dv$ (Integrar) | Signo
+$t^2$ | $e^{t/3}$ | $(+)$
+$2t$ | $3e^{t/3}$ | $(-)$
+$2$ | $9e^{t/3}$ | $(+)$
+$0$ | $27e^{t/3}$ | $(-)$
+🏁 Resultado: $t^2(3e^{t/3}) - 2t(9e^{t/3}) + 2(27e^{t/3}) + c = 3t^2e^{t/3} - 18te^{t/3} + 54e^{t/3} + c$
+
+3) $\int t^3 \cos 2t dt$
+📉 $u$ (Derivar) | 📈 $dv$ (Integrar) | Signo
+$t^3$ | $\cos 2t$ | $(+)$
+$3t^2$ | $\frac{1}{2}\sin 2t$ | $(-)$
+$6t$ | $-\frac{1}{4}\cos 2t$ | $(+)$
+$6$ | $-\frac{1}{8}\sin 2t$ | $(-)$
+$0$ | $\frac{1}{16}\cos 2t$ | $(+)$
+🏁 Resultado: $\frac{1}{2}t^3\sin 2t - 3t^2 \left( -\frac{1}{4}\cos 2t \right) + 6t \left( -\frac{1}{8}\sin 2t \right) - 6 \left( \frac{1}{16}\cos 2t \right) + c$
+Simplificando: $\frac{1}{2}t^3\sin 2t + \frac{3}{4}t^2\cos 2t - \frac{3}{4}t\sin 2t - \frac{3}{8}\cos 2t + c$
+[Nota de asesor: La alumna no simplifica fracciones. Escribió $-\frac{6}{16}$ en lugar de $-\frac{3}{8}$. Exígele reducción total siempre.]
+
+
+---
+---
+
+Página 12
+
+Ecuaciones diferenciales
+Clasificación
+
+[Nota de asesor: La alumna anota conceptos difusos. Una ecuación diferencial lineal de orden n requiere que la variable dependiente y todas sus derivadas sean de grado 1, y que no existan productos entre ellas ni funciones trascendentes aplicadas a las mismas.]
+
+Tabla de análisis:
+Ecuación | Orden (máxima derivada) | Grado / Linealidad | Tipo
+$5x^3 - 3\dot{x} = t$ | 1er orden | Grado 1 en derivada, Grado 3 en x | No lineal (por el término $x^3$)
+$2\dot{x} + 5\ln x = 4$ | 1er orden | Grado 1 | No lineal (por función trascendente $\ln x$)
+$7\ddot{x} + 4x = 2x$ | 2do orden | Grado 1 | Lineal
+$7t^4 - 5\dot{x} = 2x$ | 1er orden | Grado 1 | Lineal 
+[Nota de asesor: Tu alumna clasificó la última como "3 orden". Error absoluto de lectura. El $t^4$ no afecta el orden de derivación respecto a $x$.]
+$3\ddot{x} - 5x^2 = 4x^{(IV)} - t$ | 4to orden | Grado 1 | No lineal (por el término $x^2$)
+
+Variables separables
+Ejemplo básico: $\dot{x} - 3 = t$
+🔄 Paso 1: Despejar la derivada. $\dot{x} = t + 3$
+✂️ Paso 2: Separar diferenciales. $dx = (t + 3) dt$
+🧩 Paso 3: Integrar ambos lados. $\int dx = \int (t + 3) dt$
+🏁 Paso 4: Solución general. $x = \frac{t^2}{2} + 3t + c$
+
+
+---
+---
+
+Página 13
+
+1) $5t\dot{x} + 4t = 2$
+✂️ Paso 1: Despejar el término con derivada. $5t\dot{x} = 2 - 4t$
+✂️ Paso 2: Aislar $\dot{x}$. $\dot{x} = \frac{2 - 4t}{5t}$
+🔄 Paso 3: Separar variables y dividir el polinomio. $dx = \left( \frac{2}{5t} - \frac{4t}{5t} \right) dt = \left( \frac{2}{5t} - \frac{4}{5} \right) dt$
+🧩 Paso 4: Integrar. $\int dx = \int \left( \frac{2}{5t} - \frac{4}{5} \right) dt$
+🏁 Paso 5: Solución general. $x = \frac{2}{5}\ln t - \frac{4}{5}t + c$
+
+Ecuaciones diferenciales por factor integrante (1er orden lineal)
+Estructura teórica estándar: $\dot{x} + P(t)x = Q(t)$
+[Nota de asesor: La alumna escribe $a\dot{x} + f(t)x = g(t)$ e inventa reglas informales sin sentido matemático riguroso como "limpia" y "nada la multiplica".]
+
+2) $\dot{x} + 4x = 2$
+[Nota de asesor: Escribe "no se puede por variables separables". Falso. Sí se puede. Desarrollaré ambos métodos para refutarla.]
+
+Método de variables separables:
+🔄 Paso 1: $\frac{dx}{dt} = 2 - 4x$
+✂️ Paso 2: $\frac{dx}{2 - 4x} = dt$
+🧩 Paso 3: $\int \frac{dx}{2 - 4x} = \int dt \rightarrow -\frac{1}{4}\ln|2 - 4x| = t + c_1$
+🏁 Paso 4: Despejar $x$. $\ln|2 - 4x| = -4t - 4c_1 \rightarrow 2 - 4x = e^{-4t} e^{-4c_1} \rightarrow 4x = 2 - Ce^{-4t} \rightarrow x = \frac{1}{2} - C_2 e^{-4t}$
+
+Método de factor integrante:
+🔄 Paso 1: Identificar $P(t) = 4$, $Q(t) = 2$.
+🧩 Paso 2: Factor integrante $\mu(t) = e^{\int 4 dt} = e^{4t}$.
+⚙️ Paso 3: Multiplicar ecuación. $e^{4t}\dot{x} + 4e^{4t}x = 2e^{4t}$.
+📉 Paso 4: Reconocer regla del producto. $\frac{d}{dt}(x e^{4t}) = 2e^{4t}$.
+🏁 Paso 5: Integrar y despejar. $x e^{4t} = \int 2e^{4t} dt = \frac{1}{2}e^{4t} + c \rightarrow x = \frac{1}{2} + ce^{-4t}$.
+
+
+---
+---
+
+Página 14
+
+Ejercicios sueltos de separación de variables
+[Nota de asesor: La alumna abandona estos cálculos en la fase de planteamiento. Los desarrollo hasta el final.]
+
+1) $4e^{2t}\dot{x} - 2 = 3$
+🔄 Paso 1: Despejar. $4e^{2t}\dot{x} = 5 \rightarrow \dot{x} = \frac{5}{4e^{2t}} = \frac{5}{4}e^{-2t}$
+✂️ Paso 2: Separar. $dx = \frac{5}{4}e^{-2t} dt$
+🧩 Paso 3: Integrar. $\int dx = \frac{5}{4} \int e^{-2t} dt$
+🏁 Paso 4: Solución. $x = \frac{5}{4} \left( -\frac{1}{2}e^{-2t} \right) + c = -\frac{5}{8}e^{-2t} + c$
+
+2) $\frac{5\dot{x}}{t} = 2\cos 5t$
+🔄 Paso 1: Despejar $\dot{x}$. $5\dot{x} = 2t\cos 5t \rightarrow \dot{x} = \frac{2}{5}t\cos 5t$
+✂️ Paso 2: Separar. $dx = \frac{2}{5}t\cos 5t dt$
+🧩 Paso 3: Integrar por partes ($u = \frac{2}{5}t, dv = \cos 5t dt$).
+📉 Paso 4: $du = \frac{2}{5} dt$, $v = \frac{1}{5}\sin 5t$.
+🏁 Paso 5: Solución. $x = \frac{2}{25}t\sin 5t - \int \frac{2}{25}\sin 5t dt = \frac{2}{25}t\sin 5t + \frac{2}{125}\cos 5t + c$
+
+3) $3\dot{x} = 1$
+🔄 Paso 1: Despejar. $\dot{x} = \frac{1}{3}$
+✂️ Paso 2: Separar. $dx = \frac{1}{3} dt$
+🏁 Paso 3: Integrar. $x = \frac{1}{3}t + c$
+
+Finaliza contenido
