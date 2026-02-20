@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritmética y Álgebra Operativa | Material de Clase</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            /* BRAND PALETTE */
+            --brand-black: #0B0B0B;
+            --brand-blue: #1C2A3A;
+            --brand-graphite: #2E2E2E;
+            --brand-gold: #C6A75E;
+            --brand-ivory: #F2F2EE;
+
+            /* FUNCTIONAL COLORS */
+            --text-heading: var(--brand-black);
+            --text-body: #334155;
+            --bg-body: var(--brand-ivory);
+            --bg-surface: #ffffff;
+            --border-color: #e2e8f0;
+            --accent-color: var(--brand-blue);
+            --highlight-color: var(--brand-gold);
+
+            /* UI CONSTANTS */
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --section-gap: 6rem;
+
+            --section-gap: 6rem;
+
+            /* TOOLTIP COLORS (Light Mode -> Dark Tooltip) */
+            --tooltip-bg: var(--brand-black);
+            --tooltip-text: #ffffff;
+            --tooltip-border: var(--brand-blue);
+
+            /* THEME GRADIENTS (Default Light) */
+            --grad-hierarchy: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            /* Deep Blue -> Blue */
+            --grad-fractions: linear-gradient(135deg, #047857 0%, #10b981 100%);
+            /* Deep Green -> Emerald */
+            --grad-powers: linear-gradient(135deg, #be185d 0%, #ec4899 100%);
+            /* Deep Pink -> Pink */
+            --grad-factoring: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
+            /* Deep Purple -> Violet */
+            --grad-simplification: linear-gradient(135deg, #b45309 0%, #f59e0b 100%);
+            /* Deep Amber -> Amber */
+            --grad-equations: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);
+            /* Deep Red -> Red */
+        }
+
+        [data-theme="dark"] {
+            --text-heading: #f8fafc;
+            --text-body: #cbd5e1;
+            --bg-body: var(--brand-black);
+            --bg-surface: var(--brand-graphite);
+            --border-color: #475569;
+            --accent-color: #60a5fa;
+            /* Lighter blue for dark mode */
+
+            /* Lighter blue for dark mode */
+
+            /* TOOLTIP COLORS (Dark Mode -> Light Tooltip) */
+            --tooltip-bg: #f8fafc;
+            --tooltip-text: #0B0B0B;
+            --tooltip-border: #ffffff;
+
+            /* THEME GRADIENTS (Dark Mode - Neon/Bright) */
+            --grad-hierarchy: linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%);
+            /* Blue -> Cyan */
+            --grad-fractions: linear-gradient(135deg, #10b981 0%, #a3e635 100%);
+            /* Emerald -> Lime */
+            --grad-powers: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+            /* Pink -> Rose */
+            --grad-factoring: linear-gradient(135deg, #a78bfa 0%, #e879f9 100%);
+            /* Violet -> Fuchsia */
+            --grad-simplification: linear-gradient(135deg, #fbbf24 0%, #fcd34d 100%);
+            /* Amber -> Yellow */
+            --grad-equations: linear-gradient(135deg, #f87171 0%, #fca5a5 100%);
+            /* Red -> Salmon */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-body);
+            font-family: 'Manrope', sans-serif;
+            line-height: 1.7;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--text-heading);
+            line-height: 1.2;
+        }
+
+        /* HEADER REMOVED */
+
+
+        /* THEME TOGGLE */
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-heading);
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--bg-surface);
+            transform: scale(1.05);
+            border-color: var(--brand-gold);
+        }
+
+        .theme-toggle img {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+
+        /* MAIN LAYOUT */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 6rem;
+        }
+
+        /* HERO */
+        .hero-section {
+            padding: 6rem 0 4rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 4rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-heading) 0%, var(--brand-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-body);
+            opacity: 0.8;
+            max-width: 600px;
+        }
+
+        /* SECTIONS */
+        .content-section {
+            margin-bottom: var(--section-gap);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            color: var(--brand-gold);
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .sub-section-title {
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            /* Default color, overridden by themes */
+            color: var(--accent-color);
+        }
+
+        /* THEME GRADIENT UTILITIES */
+        /* Hierarchy */
+        .theme-hierarchy .section-title,
+        .theme-hierarchy .section-number,
+        .theme-hierarchy .sub-section-title {
+            background: var(--grad-hierarchy);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            /* Required for gradients to work properly on text */
+        }
+
+        /* Fractions */
+        .theme-fractions .section-title,
+        .theme-fractions .section-number,
+        .theme-fractions .sub-section-title {
+            background: var(--grad-fractions);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        /* Powers */
+        .theme-powers .section-title,
+        .theme-powers .section-number,
+        .theme-powers .sub-section-title {
+            background: var(--grad-powers);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        /* Factoring */
+        .theme-factoring .section-title,
+        .theme-factoring .section-number,
+        .theme-factoring .sub-section-title {
+            background: var(--grad-factoring);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        /* Simplification */
+        .theme-simplification .section-title,
+        .theme-simplification .section-number,
+        .theme-simplification .sub-section-title {
+            background: var(--grad-simplification);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        /* Equations */
+        .theme-equations .section-title,
+        .theme-equations .section-number,
+        .theme-equations .sub-section-title {
+            background: var(--grad-equations);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* MATH BLOCKS */
+        .math-block {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-left: 3px solid var(--brand-blue);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        [data-theme="dark"] .math-block {
+            border-left-color: var(--accent-color);
+        }
+
+        /* SPECIAL CARDS: Examples & Exercises */
+        .example-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin-top: 2rem;
+            border-left: 4px solid var(--brand-gold);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .example-label {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--brand-gold);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .exercises-card {
+            background: rgba(198, 167, 94, 0.05);
+            /* very light gold tint */
+            border: 1px dashed var(--brand-gold);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        [data-theme="dark"] .exercises-card {
+            background: rgba(198, 167, 94, 0.05);
+        }
+
+        .exercises-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--brand-gold);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-label {
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 0.9em;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .container {
+                padding: 0 1.25rem 4rem;
+            }
+        }
+
+        /* SIDE NAV */
+        .side-nav {
+            position: fixed;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            z-index: 100;
+            padding: 1rem 0.5rem;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--text-body);
+            opacity: 0.3;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav-dot:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .nav-dot.active {
+            opacity: 1;
+            transform: scale(1.3);
+            background-color: var(--text-heading);
+            box-shadow: 0 0 0 6px var(--bg-surface), 0 0 0 8px var(--brand-gold);
+        }
+
+        /* TOOLTIP STYLES */
+        .nav-dot::after {
+            content: attr(aria-label);
+            position: absolute;
+            left: 1.5rem;
+            /* Push to right of dot */
+            top: 50%;
+            transform: translateY(-50%) translateX(10px);
+            background-color: var(--tooltip-bg);
+            color: var(--tooltip-text);
+            border: 2px solid var(--tooltip-border);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            pointer-events: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 101;
+        }
+
+        .nav-dot:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        /* Hide nav on smaller screens to avoid overlap */
+        @media (max-width: 1024px) {
+            .side-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Removed global site-header as requested -->
+
+    <div class="container">
+
+        <!-- HERO -->
+        <section class="hero-section" id="hero">
+            <div class="hero-header-container"
+                style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem;">
+                <h1 class="hero-title" style="margin-bottom: 0; line-height: 1.1;">Aritmética y Álgebra Operativa</h1>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo"
+                    style="flex-shrink: 0; margin-top: 0.5rem;">
+                    <!-- Icon inject via JS -->
+                    <img src="assets/moon_icon.svg" alt="Modo Oscuro" id="toggleIcon">
+                </button>
+            </div>
+
+            <p class="hero-subtitle" style="margin-top: 1.5rem;">
+                Tema de hoy: Jerarquía de operaciones, fracciones, potencias, factorización, simplificación y
+                ecuaciones.
+            </p>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section class="content-section" id="intro">
+            <div class="section-header">
+                <h2 class="section-title">Introducción</h2>
+            </div>
+            <p>Si no dominas el orden en que se hacen las operaciones, vas a obtener resultados incorrectos aunque sepas
+                sumar, restar, multiplicar y dividir. En cálculo e integrales esto pega durísimo porque todo el tiempo
+                vas a simplificar expresiones.</p>
+        </section>
+
+        <!-- 01.1 Jerarquía -->
+        <section class="content-section theme-hierarchy" id="hierarchy">
+            <div class="section-header">
+                <span class="section-number">01.1</span>
+                <h2 class="section-title">Jerarquía de operaciones</h2>
+            </div>
+
+            <p>Es una regla que dice en qué orden se resuelven operaciones dentro de una expresión, para que todas las
+                personas obtengan el mismo resultado ✅.</p>
+
+            <h3 class="sub-section-title">Orden estándar (lo que se respeta siempre) 📌</h3>
+            <ol>
+                <li><strong>Paréntesis (y agrupadores):</strong> ( ), [ ], { }. Se resuelve primero lo que esté
+                    “encerrado”.</li>
+                <li><strong>Potencias y raíces:</strong> \(a^n, \sqrt{a}\)</li>
+                <li><strong>Multiplicación y división:</strong> \(\times, \div\). De izquierda a derecha.</li>
+                <li><strong>Suma y resta:</strong> \(+, -\). De izquierda a derecha.</li>
+            </ol>
+
+            <h3 class="sub-section-title">Dos reglas finas que te evitan errores</h3>
+            <ul>
+                <li>Multiplicación y división tienen el mismo nivel. No es “primero multiplicar siempre”. Es de
+                    izquierda a derecha.</li>
+                <li>Suma y resta también tienen el mismo nivel. Igual: izquierda a derecha.</li>
+            </ul>
+
+            <h3 class="sub-section-title">Notación y términos (sin suposiciones) 🧩</h3>
+            <ul>
+                <li><strong>Expresión:</strong> combinación de números, letras y operaciones, por ejemplo \(3 + 2x\).
+                </li>
+                <li><strong>Agrupador:</strong> símbolo que “encierra” una parte para resolverla primero, por ejemplo
+                    \((2 + 5)\).</li>
+                <li><strong>De izquierda a derecha:</strong> si hay varias operaciones del mismo nivel, vas resolviendo
+                    conforme aparecen al leer.</li>
+            </ul>
+
+            <div class="example-card">
+                <span class="example-label">Ejemplo 1 (sin paréntesis) ✅</span>
+                <p>Resuelve:</p>
+                <div class="math-block">\[ 8 - 2\cdot 3 + 4 \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Identifica multiplicaciones y divisiones primero: \(2\cdot 3 = 6\)
+                </p>
+                <p><span class="step-label">2)</span> Sustituye: \(8 - 6 + 4\)</p>
+                <p><span class="step-label">3)</span> Suma y resta de izquierda a derecha: \(8 - 6 = 2\), luego \(2 + 4
+                    = 6\)</p>
+
+                <p><strong>Resultado</strong></p>
+                <p>\(8 - 2\cdot 3 + 4 = 6\)</p>
+
+                <hr style="border:0; border-top:1px dashed var(--border-color); margin: 1.5rem 0;">
+
+                <span class="example-label">Ejemplo 2 (con paréntesis y potencia) ✅</span>
+                <p>Resuelve:</p>
+                <div class="math-block">\[ (5 - 2)^2 + 12 \div 3 \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Paréntesis primero: \(5 - 2 = 3\)</p>
+                <p><span class="step-label">2)</span> Potencia: \(3^2 = 9\)</p>
+                <p><span class="step-label">3)</span> División: \(12 \div 3 = 4\)</p>
+                <p><span class="step-label">4)</span> Suma final: \(9 + 4 = 13\)</p>
+
+                <p><strong>Resultado</strong></p>
+                <p>\((5 - 2)^2 + 12 \div 3 = 13\)</p>
+            </div>
+
+            <div class="exercises-card">
+                <div class="exercises-title">📝 Ejercicios (3) 🧮</div>
+                <p>Resuélvelos respetando el orden y mostrando pasos:</p>
+                <ol>
+                    <li>\[ 18 - 6 \div 2 + 3\cdot 4 \]</li>
+                    <li>\[ (7 + 1)\cdot 3 - 2^3 \]</li>
+                    <li>\[ 24 \div (6 - 2) + 5\cdot (3 - 1) \]</li>
+                </ol>
+            </div>
+        </section>
+
+
+        <!-- 01.2 Fracciones -->
+        <section class="content-section theme-fractions" id="fractions">
+            <div class="section-header">
+                <span class="section-number">01.2</span>
+                <h2 class="section-title">Fracciones: suma, resta, multiplicación y división</h2>
+            </div>
+
+            <h3 class="sub-section-title">Introducción</h3>
+            <p>Una fracción representa una división:</p>
+            <div class="math-block">\[ \frac{a}{b} \]</div>
+            <p>donde \(a\) es el numerador (lo de arriba) y \(b\) es el denominador (lo de abajo). La regla básica es:
+            </p>
+            <div class="math-block">\[ b\neq 0 \]</div>
+            <p>porque no se puede dividir entre cero.</p>
+
+            <h3 class="sub-section-title">Términos que debes dominar (rápido y claro) 🧩</h3>
+            <ul>
+                <li><strong>Numerador:</strong> \(a\) en \(\frac{a}{b}\).</li>
+                <li><strong>Denominador:</strong> \(b\) en \(\frac{a}{b}\).</li>
+                <li><strong>Fracciones equivalentes:</strong> diferentes fracciones que valen lo mismo, por ejemplo:
+                    \(\frac{1}{2}=\frac{2}{4}=\frac{3}{6}\).</li>
+                <li><strong>Simplificar:</strong> dividir numerador y denominador entre el mismo número (distinto de
+                    cero) para reducir la fracción: \(\frac{6}{8}=\frac{6\div 2}{8\div 2}=\frac{3}{4}\).</li>
+                <li><strong>Mínimo común múltiplo (m.c.m.):</strong> el número más pequeño que es múltiplo de dos
+                    denominadores. Sirve para sumar y restar.</li>
+            </ul>
+
+            <h3 class="sub-section-title">1) Suma de fracciones ✅</h3>
+            <h4>Caso A: mismo denominador</h4>
+            <div class="math-block">\[ \frac{a}{b}+\frac{c}{b}=\frac{a+c}{b} \]</div>
+
+            <h4>Caso B: distinto denominador</h4>
+            <ol>
+                <li>Encuentra un denominador común (idealmente el m.c.m.).</li>
+                <li>Convierte ambas fracciones a ese denominador.</li>
+                <li>Suma numeradores.</li>
+            </ol>
+
+            <h3 class="sub-section-title">2) Resta de fracciones ✅</h3>
+            <h4>Caso A: mismo denominador</h4>
+            <div class="math-block">\[ \frac{a}{b}-\frac{c}{b}=\frac{a-c}{b} \]</div>
+
+            <h4>Caso B: distinto denominador</h4>
+            <p>Igual que en suma: denominador común, convierte, resta numeradores.</p>
+
+            <h3 class="sub-section-title">3) Multiplicación de fracciones ✅</h3>
+            <p>Multiplicas “arriba con arriba” y “abajo con abajo”:</p>
+            <div class="math-block">\[ \frac{a}{b}\cdot\frac{c}{d}=\frac{ac}{bd} \]</div>
+            <p>Luego simplificas si se puede.</p>
+            <p><strong>Tip útil:</strong> si puedes simplificar antes de multiplicar, te ahorras números grandes.</p>
+
+            <h3 class="sub-section-title">4) División de fracciones ✅</h3>
+            <p>Dividir entre una fracción es multiplicar por su recíproco (voltear la segunda):</p>
+            <div class="math-block">\[ \frac{a}{b}\div\frac{c}{d}=\frac{a}{b}\cdot\frac{d}{c} \]</div>
+            <p>Regla: \(c\neq 0,\quad d\neq 0\).</p>
+
+            <div class="example-card">
+                <span class="example-label">Ejemplo 1 (suma y resta) ✅</span>
+                <p>Resuelve:</p>
+                <div class="math-block">\[ \frac{3}{4}+\frac{2}{3}-\frac{1}{6} \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Denominadores: \(4,3,6\). Buscamos un denominador común. El m.c.m.
+                    de \(4,3,6\) es \(12\). ✅</p>
+                <p><span class="step-label">2)</span> Convertimos cada fracción a denominador \(12\):</p>
+                <div class="math-block">\[ \frac{3}{4}=\frac{3\cdot 3}{4\cdot 3}=\frac{9}{12} \]</div>
+                <div class="math-block">\[ \frac{2}{3}=\frac{2\cdot 4}{3\cdot 4}=\frac{8}{12} \]</div>
+                <div class="math-block">\[ \frac{1}{6}=\frac{1\cdot 2}{6\cdot 2}=\frac{2}{12} \]</div>
+
+                <p><span class="step-label">3)</span> Sustituimos y operamos numeradores:</p>
+                <div class="math-block">\[ \frac{9}{12}+\frac{8}{12}-\frac{2}{12}=\frac{9+8-2}{12}=\frac{15}{12} \]
+                </div>
+
+                <p><span class="step-label">4)</span> Simplificamos \(\frac{15}{12}\): El máximo común divisor de \(15\)
+                    y \(12\) es \(3\).</p>
+                <div class="math-block">\[ \frac{15}{12}=\frac{15\div 3}{12\div 3}=\frac{5}{4} \]</div>
+
+                <p><strong>Resultado</strong></p>
+                <p>\(\frac{3}{4}+\frac{2}{3}-\frac{1}{6}=\frac{5}{4}\)</p>
+
+                <hr style="border:0; border-top:1px dashed var(--border-color); margin: 1.5rem 0;">
+
+                <span class="example-label">Ejemplo 2 (multiplicación y división) ✅</span>
+                <p>Resuelve:</p>
+                <div class="math-block">\[ \frac{5}{12}\cdot\frac{18}{25}\div\frac{3}{10} \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Primero la multiplicación:</p>
+                <div class="math-block">\[ \frac{5}{12}\cdot\frac{18}{25}=\frac{5\cdot 18}{12\cdot 25} \]</div>
+
+                <p><span class="step-label">2)</span> Simplificamos antes de multiplicar (para hacerlo limpio):</p>
+                <p>- Simplifica \(18\) con \(12\): \(\frac{18}{12}=\frac{18\div 6}{12\div 6}=\frac{3}{2}\)</p>
+                <p>- Simplifica \(5\) con \(25\): \(\frac{5}{25}=\frac{1}{5}\)</p>
+                <p>Entonces: \(\frac{5}{12}\cdot\frac{18}{25}=\frac{1\cdot 3}{2\cdot 5}=\frac{3}{10}\)</p>
+
+                <p><span class="step-label">3)</span> Ahora divide entre \(\frac{3}{10}\):</p>
+                <div class="math-block">\[ \frac{3}{10}\div\frac{3}{10}=\frac{3}{10}\cdot\frac{10}{3} \]</div>
+
+                <p><span class="step-label">4)</span> Multiplicamos y simplificamos:</p>
+                <div class="math-block">\[ \frac{3\cdot 10}{10\cdot 3}=\frac{30}{30}=1 \]</div>
+
+                <p><strong>Resultado</strong></p>
+                <p>\(\frac{5}{12}\cdot\frac{18}{25}\div\frac{3}{10}=1\)</p>
+            </div>
+
+            <div class="exercises-card">
+                <div class="exercises-title">📝 Ejercicios (3) 🧮</div>
+                <p>Resuelve mostrando pasos y simplificando al final:</p>
+                <ol>
+                    <li>\[ \frac{7}{8}+\frac{1}{4} \]</li>
+                    <li>\[ \frac{5}{6}-\frac{3}{8} \]</li>
+                    <li>\[ \frac{9}{10}\div\frac{3}{5}\cdot\frac{4}{9} \]</li>
+                </ol>
+            </div>
+        </section>
+
+
+        <!-- 01.3 Potencias -->
+        <section class="content-section theme-powers" id="powers">
+            <div class="section-header">
+                <span class="section-number">01.3</span>
+                <h2 class="section-title">Potencias y Radicales</h2>
+            </div>
+            <p>En álgebra y cálculo vas a ver potencias y raíces en casi todo: crecimiento, interés compuesto, funciones
+                cuadráticas, simplificación de expresiones y, más adelante, derivadas e integrales. Aquí el objetivo es
+                que puedas reescribir expresiones para que queden más simples y manejables ✅.</p>
+
+            <h3 class="sub-section-title">1) Potencias: qué significan 📌</h3>
+            <p>Una potencia se escribe así:</p>
+            <div class="math-block">\[ a^n \]</div>
+            <ul>
+                <li>\(a\): base (el número o expresión que se repite).</li>
+                <li>\(n\): exponente (cuántas veces se multiplica la base).</li>
+            </ul>
+            <p>Si \(n\) es un entero positivo:</p>
+            <div class="math-block">\[ a^n=\underbrace{a\cdot a\cdot a\cdots a}_{n\text{ veces}} \]</div>
+
+            <h3 class="sub-section-title">Casos especiales (sí o sí debes saber) 🧩</h3>
+            <ol>
+                <li><strong>Exponente cero (con \(a\neq 0\)):</strong> \(a^0=1\)</li>
+                <li><strong>Exponente uno:</strong> \(a^1=a\)</li>
+                <li><strong>Exponente negativo (con \(a\neq 0\)):</strong> \(a^{-n}=\frac{1}{a^n}\)</li>
+            </ol>
+
+            <h3 class="sub-section-title">2) Leyes de exponentes (las reglas de simplificación) ✅</h3>
+            <p>Estas reglas se usan para juntar o separar potencias, y para simplificar fracciones con potencias.</p>
+
+            <h4>2.1 Producto de potencias con la misma base</h4>
+            <div class="math-block">\[ a^m\cdot a^n=a^{m+n} \]</div>
+
+            <h4>2.2 Cociente de potencias con la misma base (con \(a\neq 0\))</h4>
+            <div class="math-block">\[ \frac{a^m}{a^n}=a^{m-n} \]</div>
+
+            <h4>2.3 Potencia de una potencia</h4>
+            <div class="math-block">\[ \left(a^m\right)^n=a^{mn} \]</div>
+
+            <h4>2.4 Potencia de un producto</h4>
+            <div class="math-block">\[ (ab)^n=a^n b^n \]</div>
+
+            <h4>2.5 Potencia de un cociente (con \(b\neq 0\))</h4>
+            <div class="math-block">\[ \left(\frac{a}{b}\right)^n=\frac{a^n}{b^n} \]</div>
+
+            <h4>2.6 Exponentes fraccionarios (conexión con radicales)</h4>
+            <div class="math-block">\[ a^{\frac{m}{n}}=\sqrt[n]{a^m} \]</div>
+            <p>y en particular:</p>
+            <div class="math-block">\[ a^{\frac{1}{n}}=\sqrt[n]{a} \]</div>
+
+            <h3 class="sub-section-title">3) Radicales: qué significan 📌</h3>
+            <p>Un radical se escribe:</p>
+            <div class="math-block">\[ \sqrt[n]{a} \]</div>
+            <ul>
+                <li>\(n\): índice (tipo de raíz).</li>
+                <li>\(a\): radicando (lo que está dentro).</li>
+            </ul>
+            <p>Caso común:</p>
+            <div class="math-block">\[ \sqrt{a}=\sqrt[2]{a} \]</div>
+
+            <h3 class="sub-section-title">Nota importante (para no equivocarte) ⚠️</h3>
+            <ul>
+                <li>Si \(n\) es par (como \(2,4,6\)), normalmente se trabaja con \(a\ge 0\) en números reales.</li>
+                <li>Si \(n\) es impar (como \(3,5\)), puedes tener \(a\) negativo.</li>
+            </ul>
+
+            <h3 class="sub-section-title">4) Simplificación de radicales ✅</h3>
+            <p>La idea es “sacar factores” que sean potencias perfectas.</p>
+
+            <h4>Ejemplos de potencias perfectas</h4>
+            <ul>
+                <li>Cuadrados perfectos: \(1,4,9,16,25,36,49,64,81,100,\dots\)</li>
+                <li>Cubos perfectos: \(1,8,27,64,125,\dots\)</li>
+            </ul>
+
+            <p>Regla base:</p>
+            <div class="math-block">\[ \sqrt{ab}=\sqrt{a}\sqrt{b}\quad (\text{cuando }a\ge 0,\ b\ge 0) \]</div>
+            <p>y:</p>
+            <div class="math-block">\[ \sqrt[n]{a^n}=a \quad (\text{si }n\text{ es impar}) \]</div>
+            <p>Si \(n\) es par, en reales se usa: \(\sqrt{a^2}=|a|\)</p>
+
+            <div class="example-card">
+                <span class="example-label">Ejemplo 1 (leyes de exponentes) ✅</span>
+                <p>Simplifica:</p>
+                <div class="math-block">\[ \frac{(x^3)^2\cdot x^{-4}}{x^2} \]</div>
+                <p>Asumimos \(x\neq 0\) porque hay fracción con \(x\).</p>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Potencia de una potencia: \((x^3)^2=x^{3\cdot 2}=x^6\)</p>
+
+                <p><span class="step-label">2)</span> Sustituye en la expresión:</p>
+                <div class="math-block">\[ \frac{x^6\cdot x^{-4}}{x^2} \]</div>
+
+                <p><span class="step-label">3)</span> Producto misma base, sumas exponentes: \(x^6\cdot
+                    x^{-4}=x^{6+(-4)}=x^2\)</p>
+
+                <p><span class="step-label">4)</span> Cociente misma base, restas exponentes:
+                    \(\frac{x^2}{x^2}=x^{2-2}=x^0\)</p>
+
+                <p><span class="step-label">5)</span> Exponente cero: \(x^0=1\)</p>
+
+                <p><strong>Resultado</strong></p>
+                <p>\(\frac{(x^3)^2\cdot x^{-4}}{x^2}=1\)</p>
+
+                <hr style="border:0; border-top:1px dashed var(--border-color); margin: 1.5rem 0;">
+
+                <span class="example-label">Ejemplo 2 (radicales y exponentes fraccionarios) ✅</span>
+                <p>Simplifica:</p>
+                <div class="math-block">\[ \sqrt{72} \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Factoriza \(72\) buscando un cuadrado perfecto: \(72=36\cdot 2\)
+                </p>
+                <p><span class="step-label">2)</span> Separa el radical: \(\sqrt{72}=\sqrt{36\cdot
+                    2}=\sqrt{36}\sqrt{2}\)</p>
+                <p><span class="step-label">3)</span> Calcula la raíz de \(36\): \(\sqrt{36}=6\)</p>
+                <p><span class="step-label">4)</span> Sustituye: \(\sqrt{72}=6\sqrt{2}\)</p>
+
+                <p><strong>Resultado</strong></p>
+                <p>\(\sqrt{72}=6\sqrt{2}\)</p>
+            </div>
+
+            <div class="exercises-card">
+                <div class="exercises-title">📝 Ejercicios (3) 🧮</div>
+                <p>Resuelve mostrando pasos y dejando la respuesta simplificada:</p>
+                <ol>
+                    <li>\[ \frac{a^5\cdot a^{-2}}{a^4} \] (supón \(a\neq 0\))</li>
+                    <li>\[ (2x^3y^{-2})^2 \] (simplifica y deja exponentes positivos)</li>
+                    <li>\[ \sqrt{200} \] (simplifica el radical lo más posible)</li>
+                </ol>
+            </div>
+        </section>
+
+
+        <!-- 01.4 Factorización -->
+        <section class="content-section theme-factoring" id="factoring">
+            <div class="section-header">
+                <span class="section-number">01.4</span>
+                <h2 class="section-title">Factorización</h2>
+            </div>
+
+            <p>Factorizar es reescribir una expresión como un producto de expresiones más simples. En vez de tener una
+                suma o resta “revuelta”, la dejas como multiplicaciones. Esto sirve para simplificar, resolver
+                ecuaciones, reducir fracciones algebraicas y, más adelante, para integrales y límites ✅.</p>
+            <p>Idea rápida:</p>
+            <div class="math-block">\[ \text{Expandir} \Rightarrow \text{multiplicar y sumar} \qquad \text{Factorizar}
+                \Rightarrow \text{al revés: “desarmar”} \]</div>
+
+            <h3 class="sub-section-title">Términos básicos (para no perderte) 🧩</h3>
+            <ul>
+                <li><strong>Factor:</strong> cada parte que se multiplica. Ejemplo: \((2x)(3y)\) tiene factores \(2x\) y
+                    \(3y\).</li>
+                <li><strong>Factor común:</strong> lo que se repite en todos los términos.</li>
+                <li><strong>Binomio:</strong> expresión con 2 términos, por ejemplo \(x+5\).</li>
+                <li><strong>Trinomio:</strong> expresión con 3 términos, por ejemplo \(x^2+5x+6\).</li>
+            </ul>
+
+            <h3 class="sub-section-title">1) Factor común ✅</h3>
+            <p><strong>Qué es:</strong> Si todos los términos comparten un mismo número, letra o potencia, lo puedes
+                “sacar” como multiplicación.</p>
+            <p>Regla:</p>
+            <div class="math-block">\[ ab+ac=a(b+c) \]</div>
+            <p><strong>Cómo identificarlo (mecánico) 🧠✍️</strong></p>
+            <ol>
+                <li>Busca el máximo común divisor de los coeficientes numéricos.</li>
+                <li>Para letras, toma la menor potencia común en todos los términos.</li>
+            </ol>
+
+            <h3 class="sub-section-title">2) Diferencia de cuadrados ✅</h3>
+            <p><strong>Cuándo aplica:</strong> Cuando tienes \(a^2-b^2\).</p>
+            <p>Regla:</p>
+            <div class="math-block">\[ a^2-b^2=(a-b)(a+b) \]</div>
+            <p>Ojo:</p>
+            <ul>
+                <li>Funciona con resta, no con suma.</li>
+                <li>Ambos deben ser cuadrados perfectos (o algo que puedas ver como cuadrado).</li>
+            </ul>
+            <p>Ejemplos de “cuadrado disfrazado”: \(9x^2=(3x)^2,\quad 25y^4=(5y^2)^2\).</p>
+
+            <h3 class="sub-section-title">3) Trinomio cuadrado perfecto ✅</h3>
+            <p><strong>Cuándo aplica:</strong> Cuando tienes \(a^2\pm 2ab+b^2\).</p>
+            <p>Reglas:</p>
+            <div class="math-block">\[ a^2+2ab+b^2=(a+b)^2 \]</div>
+            <div class="math-block">\[ a^2-2ab+b^2=(a-b)^2 \]</div>
+            <p>Cómo reconocerlo:</p>
+            <ol>
+                <li>El primer término es un cuadrado: \(a^2\).</li>
+                <li>El último término es un cuadrado: \(b^2\).</li>
+                <li>El término de en medio es \(2ab\) (con signo \(+\) o \(-\)).</li>
+            </ol>
+
+            <h3 class="sub-section-title">4) Trinomio general ✅</h3>
+            <p>Aquí hablamos del típico \(ax^2+bx+c\) y el caso más simple \(x^2+bx+c\).</p>
+
+            <h4>Caso A: cuando \(a=1\) ✅</h4>
+            <p>Buscas dos números \(m\) y \(n\) que cumplan:</p>
+            <div class="math-block">\[ m+n=b \]</div>
+            <div class="math-block">\[ mn=c \]</div>
+            <p>Entonces:</p>
+            <div class="math-block">\[ x^2+bx+c=(x+m)(x+n) \]</div>
+
+            <h4>Caso B: cuando \(a\neq 1\) (cuando aplique) ✅</h4>
+            <p>Buscas dos números que multipliquen \(ac\) y sumen \(b\). Después separas el término \(bx\) en dos y
+                factorizas por agrupación.</p>
+
+            <div class="example-card">
+                <span class="example-label">Ejemplo 1 (factor común + diferencia de cuadrados) ✅</span>
+                <p>Factoriza completamente:</p>
+                <div class="math-block">\[ 12x^2-3 \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Factor común numérico: el máximo común divisor de \(12\) y \(3\)
+                    es \(3\).</p>
+                <div class="math-block">\[ 12x^2-3=3(4x^2-1) \]</div>
+
+                <p><span class="step-label">2)</span> Ahora observa \(4x^2-1\). Es diferencia de cuadrados:</p>
+                <p>\(4x^2=(2x)^2,\quad 1=1^2\)</p>
+                <p>Entonces: \(4x^2-1=(2x-1)(2x+1)\)</p>
+
+                <p><span class="step-label">3)</span> Sustituye:</p>
+                <div class="math-block">\[ 12x^2-3=3(2x-1)(2x+1) \]</div>
+
+                <p><strong>Resultado</strong></p>
+                <p>\(12x^2-3=3(2x-1)(2x+1)\)</p>
+
+                <hr style="border:0; border-top:1px dashed var(--border-color); margin: 1.5rem 0;">
+
+                <span class="example-label">Ejemplo 2 (trinomio cuadrado perfecto + trinomio general) ✅</span>
+                <p>Factoriza completamente:</p>
+                <div class="math-block">\[ x^2+10x+25 \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Verifica si es trinomio cuadrado perfecto:</p>
+                <ul>
+                    <li>\(x^2\) es \((x)^2\)</li>
+                    <li>\(25\) es \((5)^2\)</li>
+                    <li>El término medio debe ser \(2\cdot x\cdot 5=10x\) ✅</li>
+                </ul>
+
+                <p><span class="step-label">2)</span> Entonces:</p>
+                <div class="math-block">\[ x^2+10x+25=(x+5)^2 \]</div>
+
+                <p><strong>Resultado</strong></p>
+                <p>\( x^2+10x+25=(x+5)^2 \)</p>
+
+                <p><em>Nota: aquí también “parece” trinomio general con \(a=1\). Si buscas \(m,n\) tal que \(m+n=10\) y
+                        \(mn=25\), sale \(m=5,n=5\), y queda \((x+5)(x+5)=(x+5)^2\).</em></p>
+            </div>
+
+            <div class="exercises-card">
+                <div class="exercises-title">📝 Ejercicios (3) 🧮</div>
+                <p>Factoriza completamente (hasta donde se pueda), mostrando pasos:</p>
+                <ol>
+                    <li>Factor común: \[ 15x^3+10x^2 \]</li>
+                    <li>Diferencia de cuadrados: \[ 9y^2-16 \]</li>
+                    <li>Trinomio general: \[ x^2-7x+12 \]</li>
+                </ol>
+            </div>
+        </section>
+
+
+        <!-- 01.5 Simplificación -->
+        <section class="content-section theme-simplification" id="simplification">
+            <div class="section-header">
+                <span class="section-number">01.5</span>
+                <h2 class="section-title">Simplificación de expresiones racionales</h2>
+            </div>
+
+            <p>Una expresión racional es una fracción donde el numerador y el denominador son polinomios:</p>
+            <div class="math-block">\[ \frac{P(x)}{Q(x)}, \quad \text{con } Q(x)\neq 0 \]</div>
+            <p>Simplificarla significa reducirla a su mínima expresión cancelando factores comunes (igual que
+                \(\frac{10}{20}=\frac{1}{2}\)).</p>
+
+            <h3 class="sub-section-title">Regla de oro (no la rompas) ⚠️</h3>
+            <p>Solo puedes cancelar <strong>FACTORES</strong> (cosas que multiplican a todo el bloque), nunca
+                <strong>TÉRMINOS</strong> (cosas que suman o restan).
+            </p>
+            <div class="math-block">\[ \frac{x+3}{3} \neq x+1 \quad (\text{Error grave}) \]</div>
+            <div class="math-block">\[ \frac{3(x+1)}{3} = x+1 \quad (\text{Correcto}) \]</div>
+
+            <h3 class="sub-section-title">Procedimiento infalible 🧠✍️</h3>
+            <ol>
+                <li><strong>Factoriza</strong> completamente el numerador y el denominador.</li>
+                <li><strong>Anota restricciones</strong> (valores de \(x\) que hacen cero el denominador). Esto es
+                    formalidad matemática obligatoria.</li>
+                <li><strong>Cancela</strong> los factores idénticos arriba y abajo.</li>
+            </ol>
+
+            <div class="example-card">
+                <span class="example-label">Ejemplo 1 (diferencia de cuadrados) ✅</span>
+                <p>Simplifica:</p>
+                <div class="math-block">\[ \frac{x^2-9}{x^2-3x} \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Factoriza:</p>
+                <p>Numerador \(x^2-9\) es dif. de cuadrados: \((x-3)(x+3)\).</p>
+                <p>Denominador \(x^2-3x\) tiene factor común \(x\): \(x(x-3)\).</p>
+
+                <p><span class="step-label">2)</span> Restricciones (antes de cancelar):</p>
+                <p>\(x(x-3)\neq 0\), así que \(x\neq 0\) y \(x\neq 3\).</p>
+
+                <p><span class="step-label">3)</span> Cancela factores comunes:</p>
+                <div class="math-block">\[ \frac{(x-3)(x+3)}{x(x-3)} = \frac{x+3}{x} \]</div>
+                <p>Se va el \((x-3)\).</p>
+
+                <p><strong>Resultado</strong></p>
+                <p>\( \frac{x+3}{x} \)</p>
+
+                <hr style="border:0; border-top:1px dashed var(--border-color); margin: 1.5rem 0;">
+
+                <span class="example-label">Ejemplo 2 (trinomio general + cancelación) ✅</span>
+                <p>Simplifica:</p>
+                <div class="math-block">\[ \frac{x^2+5x+6}{x^2-4} \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Factoriza:</p>
+                <ul>
+                    <li>Num: Dos números que sumen 5 y multipliquen 6 \(\Rightarrow 2\) y \(3\). Queda \((x+2)(x+3)\).
+                    </li>
+                    <li>Denom: Dif. de cuadrados. Queda \((x-2)(x+2)\).</li>
+                </ul>
+
+                <p><span class="step-label">2)</span> Restricciones:</p>
+                <p>\((x-2)(x+2)\neq 0 \Rightarrow x\neq 2, x\neq -2\).</p>
+
+                <p><span class="step-label">3)</span> Cancela:</p>
+                <div class="math-block">\[ \frac{(x+2)(x+3)}{(x-2)(x+2)} \]</div>
+                <p>Se cancela \((x+2)\).</p>
+
+                <p><strong>Resultado</strong></p>
+                <p>\( \frac{x+3}{x-2} \)</p>
+            </div>
+
+            <div class="exercises-card">
+                <div class="exercises-title">📝 Ejercicios (3) 🧮</div>
+                <p>Simplifica completamente, escribe restricciones y muestra pasos:</p>
+                <ol>
+                    <li>\[ \frac{6x^2}{3x} \]</li>
+                    <li>\[ \frac{x^2-16}{x^2+4x} \]</li>
+                    <li>\[ \frac{x^2-2x-15}{x^2-25} \]</li>
+                </ol>
+            </div>
+        </section>
+
+
+        <!-- 01.6 Ecuaciones -->
+        <section class="content-section theme-equations" id="equations">
+            <div class="section-header">
+                <span class="section-number">01.6</span>
+                <h2 class="section-title">Ecuaciones</h2>
+            </div>
+
+            <p>Una ecuación es una igualdad donde hay incógnitas y tu chamba es encontrar el valor que hace verdadera la
+                igualdad. La regla de oro es el <strong>balance</strong>: lo que hagas de un lado, lo tienes que hacer
+                del otro para mantener la igualdad.</p>
+
+            <h3 class="sub-section-title">Tipos de Ecuaciones (lo básico) ✅</h3>
+
+            <h4>1) Ecuaciones lineales (grado 1)</h4>
+            <div class="math-block">\[ ax+b=c \]</div>
+            <p><strong>Estrategia:</strong> Despejar \(x\) con operaciones inversas (suma \(\leftrightarrow\) resta,
+                multiplicación \(\leftrightarrow\) división).</p>
+
+            <h4>2) Ecuaciones cuadráticas (grado 2)</h4>
+            <div class="math-block">\[ ax^2+bx+c=0 \]</div>
+            <p><strong>Estrategia:</strong></p>
+            <ul>
+                <li>Factorizar (si es fácil): \((x-x_1)(x-x_2)=0 \Rightarrow x=x_1, x=x_2\).</li>
+                <li>Fórmula General (la vieja confiable):
+                    \[ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} \]
+                </li>
+            </ul>
+
+            <h4>3) Ecuaciones con fracciones</h4>
+            <p><strong>Estrategia:</strong> Multiplicar toda la ecuación por el mínimo común múltiplo (m.c.m.) de los
+                denominadores para eliminarlos de golpe. <strong>OJO:</strong> Siempre anota restricciones antes de
+                empezar.</p>
+
+            <div class="example-card">
+                <span class="example-label">Ejemplo 1 (lineal) ✅</span>
+                <p>Resuelve:</p>
+                <div class="math-block">\[ 3x-7=11 \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Deja solo el término con \(x\). Suma 7 a ambos lados:</p>
+                <p>\(3x = 11+7 \Rightarrow 3x=18\)</p>
+
+                <p><span class="step-label">2)</span> Despeja \(x\). Divide entre 3:</p>
+                <p>\(x = 18/3 \Rightarrow x=6\)</p>
+
+                <p><strong>Resultado</strong></p>
+                <p>\( x=6 \)</p>
+
+                <hr style="border:0; border-top:1px dashed var(--border-color); margin: 1.5rem 0;">
+
+                <span class="example-label">Ejemplo 2 (con fracciones y limpieza de denominadores) ✅</span>
+                <p>Resuelve:</p>
+                <div class="math-block">\[ \frac{x}{4}-\frac{1}{2}=\frac{3}{8} \]</div>
+
+                <p><strong>Paso a paso 🧠✍️</strong></p>
+                <p><span class="step-label">1)</span> Identifica denominadores: \(4, 2, 8\). El m.c.m. es \(8\).</p>
+
+                <p><span class="step-label">2)</span> Multiplica TODA la ecuación por \(8\):</p>
+                <div class="math-block">\[ 8\left(\frac{x}{4}\right) - 8\left(\frac{1}{2}\right) =
+                    8\left(\frac{3}{8}\right) \]</div>
+                <p>Simplificando cada término:</p>
+                <ul>
+                    <li>\(8/4 = 2 \Rightarrow 2x\)</li>
+                    <li>\(8/2 = 4 \Rightarrow -4(1) = -4\)</li>
+                    <li>\(8/8 = 1 \Rightarrow 1(3) = 3\)</li>
+                </ul>
+                <p>Nueva ecuación (sin fracciones): \(2x - 4 = 3\)</p>
+
+                <p><span class="step-label">3)</span> Resuelve la lineal:</p>
+                <p>\(2x = 3+4 \Rightarrow 2x=7\)</p>
+                <p>\(x = 7/2\)</p>
+
+                <p><span class="step-label">4)</span> Verificación (opcional pero recomendada):</p>
+                <p>\(\frac{7/2}{4} - \frac{1}{2} = \frac{7}{8} - \frac{4}{8} = \frac{3}{8}\). ¡Correcto!</p>
+
+                <p><strong>Resultado</strong></p>
+                <p>\( x=\frac{7}{2} \)</p>
+            </div>
+
+            <div class="exercises-card">
+                <div class="exercises-title">📝 Ejercicios (3) 🧮</div>
+                <p>Resuelve mostrando pasos y verifica tu respuesta:</p>
+                <ol>
+                    <li>Lineal: \[ 5x+9=2x-3 \]</li>
+                    <li>Cuadrática: \[ x^2-5x+6=0 \]</li>
+                    <li>Con fracciones (usa m.c.m.): \[ \frac{x}{3}+\frac{1}{6}=2 \]</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer style="text-align: center; margin-top: 6rem; padding-bottom: 2rem; opacity: 0.8;">
+            <p style="margin-bottom: 0.5rem; font-size: 1rem;">Material desarrollado por el</p>
+            <p
+                style="font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0;">
+                Prof. Raul Morales Mendoza
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- SIDE NAVIGATION -->
+    <nav class="side-nav">
+        <a href="#hero" class="nav-dot" aria-label="Inicio"></a>
+        <a href="#intro" class="nav-dot" aria-label="Introducción"></a>
+        <a href="#hierarchy" class="nav-dot" aria-label="Jerarquía de Operaciones"></a>
+        <a href="#fractions" class="nav-dot" aria-label="Fracciones"></a>
+        <a href="#powers" class="nav-dot" aria-label="Potencias y Radicales"></a>
+        <a href="#factoring" class="nav-dot" aria-label="Factorización"></a>
+        <a href="#simplification" class="nav-dot" aria-label="Simplificación"></a>
+        <a href="#equations" class="nav-dot" aria-label="Ecuaciones"></a>
+    </nav>
+
+    <!-- Logic -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('toggleIcon');
+        const html = document.documentElement;
+
+        // Path to icons
+        const sunIcon = "assets/sun_icon.svg";
+        const moonIcon = "assets/moon_icon.svg";
+
+        // Check local storage or preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            updateIcon(savedTheme);
+        } else {
+            // Default dark
+            html.setAttribute('data-theme', 'dark');
+            updateIcon('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.src = sunIcon; // Show sun to switch to light
+                themeIcon.alt = "Cambiar a modo claro";
+            } else {
+                themeIcon.src = moonIcon; // Show moon to switch to dark
+                themeIcon.alt = "Cambiar a modo oscuro";
+            }
+        }
+
+        // NAVIGATION DOTS LOGIC
+        const sections = document.querySelectorAll('section[id]');
+        const navDots = document.querySelectorAll('.nav-dot');
+
+        const observerOptions = {
+            root: null,
+            // Adjust margin to look at the TOP portion of the screen (approx 15% down)
+            // This ensures short sections at the top are caught, instead of looking at the center
+            rootMargin: '-10% 0px -85% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+
+                    // Remove active class from all dots
+                    navDots.forEach(dot => dot.classList.remove('active'));
+
+                    // Add active class to corresponding dot
+                    const activeDot = document.querySelector(`.nav-dot[href="#${id}"]`);
+                    if (activeDot) {
+                        activeDot.classList.add('active');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll for dots (handled nicely by CSS scroll-behavior usually, but let's ensure it maps correctly)
+        // Default anchor behavior is usually fine if we have IDs.
+
+    </script>
+</body>
+
+</html>

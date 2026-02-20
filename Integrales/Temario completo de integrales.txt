@@ -1,0 +1,283 @@
+TEMARIO COMPLETO PARA DOMINAR INTEGRALES EN ECONOMÍA (DE 0 A EXPERTO) 📚🧠
+(Ordenado por “cimientos” → “técnica” → “aplicación económica” → “nivel experto”)
+
+============================================================
+0) CIMIENTOS PREVIOS (ANTES DE CÁLCULO) 🧱
+============================================================
+
+0.1 Aritmética y álgebra operativa
+- Jerarquía de operaciones.
+- Fracciones: suma, resta, multiplicación y división.
+- Potencias y radicales: leyes de exponentes y simplificación.
+- Factorización:
+  • factor común
+  • diferencia de cuadrados
+  • trinomio cuadrado perfecto
+  • trinomio general (cuando aplique)
+- Simplificación de expresiones racionales.
+- Ecuaciones:
+  • lineales
+  • cuadráticas
+  • ecuaciones con fracciones (limpieza de denominadores)
+
+0.2 Funciones y gráficas (lectura económica)
+- Concepto de función: entrada, salida, regla.
+- Dominio y rango.
+- Gráfica e interpretación: niveles vs cambios.
+- Funciones típicas:
+  • lineal
+  • cuadrática
+  • potencia: f(x)=x^a
+  • exponencial: f(x)=e^x, f(x)=a^x
+  • logarítmica: f(x)=ln(x)
+- Composición: f(g(x)).
+- Inversa de una función (cuando exista).
+- Transformaciones: desplazamientos, estiramientos y reflejos.
+
+0.3 Trigonometría mínima (solo lo necesario)
+- Razones trigonométricas básicas: seno, coseno, tangente.
+- Identidades básicas:
+  • sin^2(x)+cos^2(x)=1
+  • 1+tan^2(x)=sec^2(x)
+- Conversión entre expresiones trigonométricas comunes.
+
+============================================================
+1) LÍMITES Y CONTINUIDAD (PARA ENTENDER LA “ACUMULACIÓN”) 🧠
+============================================================
+
+1.1 Límites
+- Idea de límite: acercamiento y comportamiento local.
+- Cálculo de límites con reglas básicas.
+- Límites laterales.
+- Límites al infinito.
+
+1.2 Continuidad
+- Definición de continuidad en un punto.
+- Tipos de discontinuidad:
+  • removible
+  • salto
+  • infinita
+- Por qué importa para integrar (funciones “bien portadas” en intervalos).
+
+1.3 Formas indeterminadas (las que aparecen en cálculo)
+- 0/0, ∞/∞ y cómo se resuelven con herramientas de álgebra y, después, derivadas.
+
+============================================================
+2) CÁLCULO DIFERENCIAL (BASE DIRECTA PARA INTEGRAR) ✍️
+============================================================
+
+2.1 Derivada
+- Definición e interpretación geométrica (pendiente/tasa de cambio).
+- Interpretación económica:
+  • marginales: costo marginal, utilidad marginal, producto marginal.
+
+2.2 Reglas de derivación (dominio obligatorio)
+- Regla de la potencia.
+- Regla del producto.
+- Regla del cociente.
+- Regla de la cadena.
+- Derivadas de:
+  • exponenciales
+  • logarítmicas
+  • trigonométricas básicas
+
+2.3 Derivación aplicada a optimización simple (para conectar con economía)
+- Máximos y mínimos.
+- Criterio de primera derivada.
+- Criterio de segunda derivada.
+- Concavidad, convexidad y puntos de inflexión.
+
+============================================================
+3) INTEGRAL INDEFINIDA (ANTIDERIVADAS) ✅
+============================================================
+
+3.1 Concepto y notación
+- Antiderivada: si F'(x)=f(x), entonces ∫f(x)dx=F(x)+C.
+- Significado de la constante C.
+
+3.2 Integrales inmediatas (tabla base)
+- Potencias: ∫x^n dx.
+- Exponenciales: ∫e^x dx, ∫a^x dx.
+- Logarítmicas básicas (cuando aplique).
+- Trigonométricas directas:
+  • ∫sin(x)dx
+  • ∫cos(x)dx
+  • ∫sec^2(x)dx (si se usa)
+
+3.3 Técnicas fundamentales de integración (núcleo del curso)
+- Sustitución (cambio de variable)
+  • identificar “adentro” y “derivada de adentro”
+- Integración por partes
+  • elección de u y dv
+- Integrales de funciones racionales
+  • fracciones parciales (casos lineales y cuadráticos)
+- Integrales trigonométricas
+  • identidades y potencias de senos/cosenos
+- Sustitución trigonométrica (cuando aparezcan raíces tipo √(a^2−x^2), etc.)
+
+3.4 Estrategia para elegir técnica (metodología)
+- Checklist de diagnóstico:
+  • ¿es composición? → sustitución
+  • ¿producto con polinomio y expo/log? → por partes
+  • ¿cociente de polinomios? → división + fracciones parciales
+  • ¿trigonométrica? → identidades
+
+============================================================
+4) INTEGRAL DEFINIDA (ACUMULACIÓN Y ÁREA) 📈
+============================================================
+
+4.1 Definición (Riemann)
+- Sumas de Riemann: aproximar con rectángulos.
+- Paso al límite para definir:
+  ∫_a^b f(x) dx.
+
+4.2 Teorema Fundamental del Cálculo (TFC)
+- Conexión integral–derivada:
+  ∫_a^b f(x) dx = F(b)−F(a).
+
+4.3 Propiedades operativas
+- Linealidad.
+- Cambio de límites.
+- Partición de intervalos.
+
+4.4 Aplicaciones directas en economía (indispensables)
+- Costo total desde costo marginal:
+  C(Q)=C(0)+∫_0^Q MC(q) dq.
+- Ingreso total desde ingreso marginal:
+  R(Q)=R(0)+∫_0^Q MR(q) dq.
+- Excedente del consumidor:
+  EC=∫_0^{Q*} (P_D(q)−P*) dq.
+- Excedente del productor:
+  EP=∫_0^{Q*} (P*−P_S(q)) dq.
+- Área bajo la curva y área entre curvas:
+  ∫_a^b (f(x)−g(x)) dx (cuidar qué va arriba y qué va abajo).
+
+============================================================
+5) INTEGRALES IMPROPIAS (HORIZONTES LARGOS Y COLAS) ⚠️
+============================================================
+
+5.1 Por intervalos infinitos
+- ∫_a^∞ f(x) dx y ∫_{−∞}^∞ f(x) dx.
+
+5.2 Por discontinuidad en el intervalo
+- ∫_a^b f(x) dx cuando f(x) “explota” en algún punto.
+
+5.3 Convergencia y divergencia (criterios prácticos)
+- Comparación con integrales conocidas (p-integrales).
+- Interpretación económica:
+  • cuándo existe un valor total acumulado a largo plazo.
+
+============================================================
+6) EXPONENCIALES, LOGS Y POTENCIAS (LO MÁS USADO EN ECONOMÍA) 💡
+============================================================
+
+6.1 Formas típicas
+- ∫e^{kt} dt.
+- ∫t e^{kt} dt.
+- ∫x^α dx.
+- ∫ln(x) dx (cuando toque).
+
+6.2 Interpretación en economía
+- Crecimiento continuo.
+- Depreciación exponencial.
+- Transformaciones log para elasticidades (vínculo conceptual).
+
+============================================================
+7) VALOR PRESENTE Y FLUJOS DESCONTADOS (APLICACIÓN CENTRAL) 💸
+============================================================
+
+7.1 Descuento continuo
+- Valor presente de un flujo y(t):
+  VP=∫_0^T y(t)e^{−rt} dt.
+
+7.2 Horizonte infinito
+- VP=∫_0^∞ y(t)e^{−rt} dt.
+
+7.3 Casos estándar para dominar (sin memorizar, con técnica)
+- Flujo constante.
+- Flujo con crecimiento exponencial.
+- Flujos por tramos (función por partes).
+
+============================================================
+8) INTEGRALES MÚLTIPLES (HETEROGENEIDAD, ESPACIO, DENSIDADES) 🌍
+============================================================
+
+8.1 Doble integral
+- Región rectangular.
+- Región general (cambiar orden de integración cuando conviene).
+
+8.2 Triple integral (cuando aplica)
+- Interpretación geométrica y acumulación en 3D.
+
+8.3 Cambio de variables (idea base)
+- Jacobiano como factor de escala (nivel intermedio-avanzado).
+
+8.4 Aplicaciones económicas típicas
+- Acumulación sobre regiones (por ejemplo, densidades).
+- Bienestar agregado con heterogeneidad.
+
+============================================================
+9) INTEGRALES EN PROBABILIDAD Y ESTADÍSTICA (RIESGO) 🎲
+============================================================
+
+9.1 Distribuciones continuas
+- Densidad f(x) y distribución acumulada F(x).
+
+9.2 Esperanza y varianza (con integrales)
+- E[X]=∫_{−∞}^{∞} x f(x) dx.
+- Var(X)=∫_{−∞}^{∞} (x−μ)^2 f(x) dx.
+
+9.3 Esperanza de una función
+- E[g(X)]=∫ g(x) f(x) dx.
+
+9.4 Distribuciones para práctica
+- Uniforme continua.
+- Normal (concepto, estandarización y lectura).
+
+============================================================
+10) ECUACIONES DIFERENCIALES (PUENTE A DINÁMICA) ⏳
+============================================================
+
+10.1 EDO por separación de variables
+- Resolver y leer soluciones tipo exponencial.
+
+10.2 EDO lineales de primer orden
+- Factor integrante.
+
+10.3 Interpretación económica
+- Crecimiento, depreciación, ajuste parcial y trayectorias.
+
+============================================================
+11) OPTIMIZACIÓN DINÁMICA (NIVEL EXPERTO APLICADO) 🧠🔥
+============================================================
+
+11.1 Cálculo de variaciones (funcionales)
+- Problemas tipo:
+  maximizar ∫_0^T U(x(t),u(t),t) dt.
+- Ecuación de Euler (condición necesaria).
+- Condiciones de transversalidad (cuando aplique).
+
+11.2 Control óptimo (Pontryagin)
+- Hamiltoniano.
+- Condiciones necesarias.
+- Hamiltoniano a valor presente.
+- Horizonte infinito.
+
+11.3 Lectura económica
+- Precio sombra y trayectoria óptima de decisiones intertemporales.
+
+============================================================
+12) HERRAMIENTAS DE NIVEL “EXPERTO” (CIERRE DEL CICLO) 🧰
+============================================================
+
+12.1 Integración numérica (cuando no hay forma cerrada)
+- Trapecios.
+- Simpson.
+- Error aproximado e interpretación.
+
+12.2 Lectura de modelos
+- Identificar qué representa una integral en un paper:
+  • acumulación
+  • bienestar agregado
+  • valor presente
+  • esperanza/probabilidad

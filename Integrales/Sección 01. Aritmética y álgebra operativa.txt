@@ -1,398 +1,1101 @@
-## Sección 01. Aritmética y álgebra operativa 🧱✍️  
-Temas base del plan del archivo. :contentReference[oaicite:0]{index=0}
-
-**Regla de formato para esta clase:** en **cada** tema, primero va la explicación y **al final** se incluyen: **2 ejemplos resueltos** y luego **3 ejercicios** (sin resolver) ✅
-
----
-
-# 01.1 Jerarquía de operaciones 🧩  
-
-## 01.1.1 Idea simple  
-La jerarquía de operaciones es el “orden de lectura” de una expresión matemática. Si no sigues ese orden, el resultado cambia, aunque tus cuentas estén bien hechas.
-
-## 01.1.2 Formulación (orden oficial)  
-1) Agrupadores: \( (\,)\), \([\,]\), \(\{\,\}\).  
-2) Potencias y raíces.  
-3) Multiplicación y división, **de izquierda a derecha**.  
-4) Suma y resta, **de izquierda a derecha**.
-
-## 01.1.3 Detalles finos que suelen fallar  
-- Multiplicación y división tienen la misma prioridad. No es “primero dividir siempre”; es en el orden en que aparecen.  
-- El signo negativo y la potencia pueden cambiar todo:  
-\[
-(-3)^2=9,\qquad -3^2=-(3^2)=-9
-\]  
-- Un paréntesis cambia completamente el resultado:  
-\[
-2(3+4)=14,\qquad 2\cdot3+4=10
-\]
+## Primera clase
+### 0) Cimientos previos (antes de cálculo) 🧱
+#### 0.1 Aritmética y álgebra operativa
+##### Tema de hoy: Jerarquía de operaciones 🧠✍️
+:contentReference[oaicite:0]{index=0}
 
 ---
 
-## Ejemplos resueltos (2) ✅  
-
-### Ejemplo 1  
-Calcula:
-\[
-12\div 3\cdot 2
-\]
-
-**Paso 1 (izquierda a derecha):**
-\[
-12\div 3=4
-\]
-
-**Paso 2:**
-\[
-4\cdot 2=8
-\]
-
-**Resultado:**
-\[
-12\div 3\cdot 2=8
-\]
+## Introducción
+Si no dominas el orden en que se hacen las operaciones, vas a obtener resultados incorrectos aunque sepas sumar, restar, multiplicar y dividir. En cálculo e integrales esto pega durísimo porque todo el tiempo vas a simplificar expresiones.
 
 ---
 
-### Ejemplo 2  
-Calcula:
-\[
-5-2\cdot(4-1)^2+3
-\]
+## Qué es la jerarquía de operaciones
+Es una regla que dice en qué orden se resuelven operaciones dentro de una expresión, para que todas las personas obtengan el mismo resultado ✅.
 
-**Paso 1 (paréntesis):**
-\[
-4-1=3
-\]
+### Orden estándar (lo que se respeta siempre) 📌
+1) Paréntesis (y agrupadores):
+( ), [ ], { }
+Se resuelve primero lo que esté “encerrado”.
 
-**Paso 2 (potencia):**
-\[
-3^2=9
-\]
+2) Potencias y raíces:
+a^n, √a
 
-**Paso 3 (multiplicación):**
-\[
-2\cdot 9=18
-\]
+3) Multiplicación y división, de izquierda a derecha:
+×, ÷
 
-**Paso 4 (sumas y restas):**
-\[
-5-18+3=-13+3=-10
-\]
+4) Suma y resta, de izquierda a derecha:
++, -
 
-**Resultado:**
-\[
-5-2\cdot(4-1)^2+3=-10
-\]
+### Dos reglas finas que te evitan errores
+- Multiplicación y división tienen el mismo nivel. No es “primero multiplicar siempre”. Es de izquierda a derecha.
+- Suma y resta también tienen el mismo nivel. Igual: izquierda a derecha.
 
 ---
 
-## Ejercicios (3) 📝  
-
-1) \[
-18-6\div 3\cdot 2
-\]
-
-2) \[
-2(5-3)^3-4
-\]
-
-3) \[
-7+(12-3\cdot 2)^2\div 9
-\]
+## Notación y términos (sin suposiciones) 🧩
+- Expresión: combinación de números, letras y operaciones, por ejemplo 3 + 2x.
+- Agrupador: símbolo que “encierra” una parte para resolverla primero, por ejemplo (2 + 5).
+- De izquierda a derecha: si hay varias operaciones del mismo nivel, vas resolviendo conforme aparecen al leer.
 
 ---
 
-# 01.2 Fracciones: suma, resta, multiplicación y división 🍕📌  
+## Ejemplo 1 (sin paréntesis) ✅
+Resuelve:
+8 - 2·3 + 4
 
-## 01.2.1 Idea simple  
-Una fracción es una división:
+### Paso a paso 🧠✍️
+1) Identifica multiplicaciones y divisiones primero:
+2·3 = 6
+2) Sustituye:
+8 - 6 + 4
+3) Suma y resta de izquierda a derecha:
+8 - 6 = 2
+2 + 4 = 6
+
+### Resultado
+8 - 2·3 + 4 = 6
+
+---
+
+## Ejemplo 2 (con paréntesis y potencia) ✅
+Resuelve:
+(5 - 2)^2 + 12 ÷ 3
+
+### Paso a paso 🧠✍️
+1) Paréntesis primero:
+5 - 2 = 3
+2) Potencia:
+3^2 = 9
+3) División:
+12 ÷ 3 = 4
+4) Suma final:
+9 + 4 = 13
+
+### Resultado
+(5 - 2)^2 + 12 ÷ 3 = 13
+
+---
+
+## Ejercicios (3) 🧮
+Resuélvelos respetando el orden y mostrando pasos:
+
+1)
+18 - 6 ÷ 2 + 3·4
+
+2)
+(7 + 1)·3 - 2^3
+
+3)
+24 ÷ (6 - 2) + 5·(3 - 1)
+
+---
+---
+
+## Fracciones: suma, resta, multiplicación y división 🧠✍️
+
+---
+
+## Introducción
+Una fracción representa una división:
 \[
-\frac{p}{q}=p\div q,\qquad q\neq 0
+\frac{a}{b}
+\]
+donde \(a\) es el numerador (lo de arriba) y \(b\) es el denominador (lo de abajo). La regla básica es:
+\[
+b\neq 0
+\]
+porque no se puede dividir entre cero.
+
+---
+
+## Términos que debes dominar (rápido y claro) 🧩
+- Numerador: \(a\) en \(\frac{a}{b}\).
+- Denominador: \(b\) en \(\frac{a}{b}\).
+- Fracciones equivalentes: diferentes fracciones que valen lo mismo, por ejemplo:
+\[
+\frac{1}{2}=\frac{2}{4}=\frac{3}{6}
+\]
+- Simplificar: dividir numerador y denominador entre el mismo número (distinto de cero) para reducir la fracción:
+\[
+\frac{6}{8}=\frac{6\div 2}{8\div 2}=\frac{3}{4}
+\]
+- Mínimo común múltiplo (m.c.m.): el número más pequeño que es múltiplo de dos denominadores. Sirve para sumar y restar.
+
+---
+
+## 1) Suma de fracciones ✅
+### Caso A: mismo denominador
+\[
+\frac{a}{b}+\frac{c}{b}=\frac{a+c}{b}
 \]
 
-## 01.2.2 Reglas operativas  
+### Caso B: distinto denominador
+1) Encuentra un denominador común (idealmente el m.c.m.).
+2) Convierte ambas fracciones a ese denominador.
+3) Suma numeradores.
 
-### Suma y resta  
-- Mismo denominador:
+---
+
+## 2) Resta de fracciones ✅
+### Caso A: mismo denominador
 \[
-\frac{m}{k}\pm\frac{n}{k}=\frac{m\pm n}{k}
+\frac{a}{b}-\frac{c}{b}=\frac{a-c}{b}
 \]
 
-- Denominadores distintos:
-\[
-\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd}
-\]
+### Caso B: distinto denominador
+Igual que en suma: denominador común, convierte, resta numeradores.
 
-\[
-\frac{a}{b}-\frac{c}{d}=\frac{ad-bc}{bd}
-\]
+---
 
-### Multiplicación  
+## 3) Multiplicación de fracciones ✅
+Multiplicas “arriba con arriba” y “abajo con abajo”:
 \[
 \frac{a}{b}\cdot\frac{c}{d}=\frac{ac}{bd}
 \]
+Luego simplificas si se puede.
 
-### División  
+Tip útil: si puedes simplificar antes de multiplicar, te ahorras números grandes.
+
+---
+
+## 4) División de fracciones ✅
+Dividir entre una fracción es multiplicar por su recíproco (voltear la segunda):
 \[
 \frac{a}{b}\div\frac{c}{d}=\frac{a}{b}\cdot\frac{d}{c}
 \]
-
----
-
-## Ejemplos resueltos (2) ✅  
-
-### Ejemplo 1  
+Regla:
 \[
-\frac{2}{3}+\frac{1}{2}
-\]
-
-\[
-\frac{2}{3}=\frac{4}{6},\qquad \frac{1}{2}=\frac{3}{6}
-\]
-
-\[
-\frac{4}{6}+\frac{3}{6}=\frac{7}{6}
+c\neq 0,\quad d\neq 0
 \]
 
 ---
 
-### Ejemplo 2  
+# Ejemplo 1 (suma y resta) ✅
+Resuelve:
 \[
-\frac{3}{4}\div\frac{2}{5}
+\frac{3}{4}+\frac{2}{3}-\frac{1}{6}
 \]
 
+### Paso a paso 🧠✍️
+1) Denominadores: \(4,3,6\). Buscamos un denominador común.
+El m.c.m. de \(4,3,6\) es \(12\). ✅
+
+2) Convertimos cada fracción a denominador \(12\):
 \[
-\frac{3}{4}\cdot\frac{5}{2}=\frac{15}{8}
+\frac{3}{4}=\frac{3\cdot 3}{4\cdot 3}=\frac{9}{12}
+\]
+\[
+\frac{2}{3}=\frac{2\cdot 4}{3\cdot 4}=\frac{8}{12}
+\]
+\[
+\frac{1}{6}=\frac{1\cdot 2}{6\cdot 2}=\frac{2}{12}
+\]
+
+3) Sustituimos y operamos numeradores:
+\[
+\frac{9}{12}+\frac{8}{12}-\frac{2}{12}=\frac{9+8-2}{12}=\frac{15}{12}
+\]
+
+4) Simplificamos \(\frac{15}{12}\):
+El máximo común divisor de \(15\) y \(12\) es \(3\).
+\[
+\frac{15}{12}=\frac{15\div 3}{12\div 3}=\frac{5}{4}
+\]
+
+### Resultado
+\[
+\frac{3}{4}+\frac{2}{3}-\frac{1}{6}=\frac{5}{4}
 \]
 
 ---
 
-## Ejercicios (3) 📝  
-
-1) \[
-\frac{5}{6}-\frac{1}{4}
+# Ejemplo 2 (multiplicación y división) ✅
+Resuelve:
+\[
+\frac{5}{12}\cdot\frac{18}{25}\div\frac{3}{10}
 \]
 
-2) \[
-\left(\frac{7}{9}\right)\left(\frac{27}{14}\right)
+### Paso a paso 🧠✍️
+1) Primero la multiplicación:
+\[
+\frac{5}{12}\cdot\frac{18}{25}=\frac{5\cdot 18}{12\cdot 25}
 \]
 
-3) \[
-\frac{4}{5}\div\frac{8}{15}
+2) Simplificamos antes de multiplicar (para hacerlo limpio):
+- Simplifica \(18\) con \(12\):
+\[
+\frac{18}{12}=\frac{18\div 6}{12\div 6}=\frac{3}{2}
+\]
+- Simplifica \(5\) con \(25\):
+\[
+\frac{5}{25}=\frac{1}{5}
+\]
+
+Entonces:
+\[
+\frac{5}{12}\cdot\frac{18}{25}=\frac{1\cdot 3}{2\cdot 5}=\frac{3}{10}
+\]
+
+3) Ahora divide entre \(\frac{3}{10}\):
+\[
+\frac{3}{10}\div\frac{3}{10}=\frac{3}{10}\cdot\frac{10}{3}
+\]
+
+4) Multiplicamos y simplificamos:
+\[
+\frac{3\cdot 10}{10\cdot 3}=\frac{30}{30}=1
+\]
+
+### Resultado
+\[
+\frac{5}{12}\cdot\frac{18}{25}\div\frac{3}{10}=1
 \]
 
 ---
 
-# 01.3 Potencias y radicales ⚡🌿  
+## Ejercicios (3) 🧮
+Resuelve mostrando pasos y simplificando al final:
 
-## 01.3.1 Leyes de exponentes  
-
+1)
 \[
-a^m a^n=a^{m+n}
+\frac{7}{8}+\frac{1}{4}
 \]
 
+2)
 \[
-\frac{a^m}{a^n}=a^{m-n}
+\frac{5}{6}-\frac{3}{8}
 \]
 
+3)
 \[
-(a^m)^n=a^{mn}
+\frac{9}{10}\div\frac{3}{5}\cdot\frac{4}{9}
 \]
 
+---
+---
+
+## Potencias y radicales: leyes de exponentes y simplificación 🧠✍️
+
+---
+
+## Introducción
+En álgebra y cálculo vas a ver potencias y raíces en casi todo: crecimiento, interés compuesto, funciones cuadráticas, simplificación de expresiones y, más adelante, derivadas e integrales. Aquí el objetivo es que puedas reescribir expresiones para que queden más simples y manejables ✅.
+
+---
+
+## 1) Potencias: qué significan 📌
+Una potencia se escribe así:
+\[
+a^n
+\]
+- \(a\): base (el número o expresión que se repite).
+- \(n\): exponente (cuántas veces se multiplica la base).
+
+Si \(n\) es un entero positivo:
+\[
+a^n=\underbrace{a\cdot a\cdot a\cdots a}_{n\text{ veces}}
+\]
+
+### Casos especiales (sí o sí debes saber) 🧩
+1) Exponente cero (con \(a\neq 0\)):
 \[
 a^0=1
 \]
-
+2) Exponente uno:
+\[
+a^1=a
+\]
+3) Exponente negativo (con \(a\neq 0\)):
 \[
 a^{-n}=\frac{1}{a^n}
 \]
 
-## 01.3.2 Radicales  
+---
 
+## 2) Leyes de exponentes (las reglas de simplificación) ✅
+Estas reglas se usan para juntar o separar potencias, y para simplificar fracciones con potencias.
+
+### 2.1 Producto de potencias con la misma base
 \[
-\sqrt[n]{a}=a^{\frac{1}{n}}
+a^m\cdot a^n=a^{m+n}
 \]
 
+### 2.2 Cociente de potencias con la misma base (con \(a\neq 0\))
+\[
+\frac{a^m}{a^n}=a^{m-n}
+\]
+
+### 2.3 Potencia de una potencia
+\[
+\left(a^m\right)^n=a^{mn}
+\]
+
+### 2.4 Potencia de un producto
+\[
+(ab)^n=a^n b^n
+\]
+
+### 2.5 Potencia de un cociente (con \(b\neq 0\))
+\[
+\left(\frac{a}{b}\right)^n=\frac{a^n}{b^n}
+\]
+
+### 2.6 Exponentes fraccionarios (conexión con radicales)
+\[
+a^{\frac{m}{n}}=\sqrt[n]{a^m}
+\]
+y en particular:
+\[
+a^{\frac{1}{n}}=\sqrt[n]{a}
+\]
+
+---
+
+## 3) Radicales: qué significan 📌
+Un radical se escribe:
+\[
+\sqrt[n]{a}
+\]
+- \(n\): índice (tipo de raíz).
+- \(a\): radicando (lo que está dentro).
+
+Caso común:
+\[
+\sqrt{a}=\sqrt[2]{a}
+\]
+
+### Nota importante (para no equivocarte) ⚠️
+- Si \(n\) es par (como \(2,4,6\)), normalmente se trabaja con \(a\ge 0\) en números reales.
+- Si \(n\) es impar (como \(3,5\)), puedes tener \(a\) negativo.
+
+---
+
+## 4) Simplificación de radicales ✅
+La idea es “sacar factores” que sean potencias perfectas.
+
+### Ejemplos de potencias perfectas
+- Cuadrados perfectos: \(1,4,9,16,25,36,49,64,81,100,\dots\)
+- Cubos perfectos: \(1,8,27,64,125,\dots\)
+
+Regla base:
+\[
+\sqrt{ab}=\sqrt{a}\sqrt{b}\quad (\text{cuando }a\ge 0,\ b\ge 0)
+\]
+y:
+\[
+\sqrt[n]{a^n}=a \quad (\text{si }n\text{ es impar})
+\]
+Si \(n\) es par, en reales se usa:
 \[
 \sqrt{a^2}=|a|
 \]
 
 ---
 
-## Ejemplos resueltos (2) ✅  
-
-### Ejemplo 1  
+# Ejemplo 1 (leyes de exponentes) ✅
+Simplifica:
 \[
-\frac{x^5\cdot x^2}{x^3}=x^{5+2-3}=x^4
+\frac{(x^3)^2\cdot x^{-4}}{x^2}
+\]
+Asumimos:
+\[
+x\neq 0
+\]
+porque hay fracción con \(x\).
+
+### Paso a paso 🧠✍️
+1) Potencia de una potencia:
+\[
+(x^3)^2=x^{3\cdot 2}=x^6
 \]
 
-### Ejemplo 2  
+2) Sustituye en la expresión:
 \[
-\sqrt{50}=\sqrt{25\cdot2}=5\sqrt{2}
+\frac{x^6\cdot x^{-4}}{x^2}
+\]
+
+3) Producto misma base, sumas exponentes:
+\[
+x^6\cdot x^{-4}=x^{6+(-4)}=x^2
+\]
+
+4) Cociente misma base, restas exponentes:
+\[
+\frac{x^2}{x^2}=x^{2-2}=x^0
+\]
+
+5) Exponente cero:
+\[
+x^0=1
+\]
+
+### Resultado
+\[
+\frac{(x^3)^2\cdot x^{-4}}{x^2}=1
 \]
 
 ---
 
-## Ejercicios (3) 📝  
-
-1) \[
-\frac{a^8}{a^3}
-\]
-
-2) \[
-(2x^3)^2
-\]
-
-3) \[
+# Ejemplo 2 (radicales y exponentes fraccionarios) ✅
+Simplifica:
+\[
 \sqrt{72}
 \]
 
----
-
-# 01.4 Factorización 🧱  
-
-## Tipos básicos  
-
-### Factor común  
+### Paso a paso 🧠✍️
+1) Factoriza \(72\) buscando un cuadrado perfecto:
 \[
-ax+ay=a(x+y)
+72=36\cdot 2
 \]
 
-### Diferencia de cuadrados  
+2) Separa el radical:
+\[
+\sqrt{72}=\sqrt{36\cdot 2}=\sqrt{36}\sqrt{2}
+\]
+
+3) Calcula la raíz de \(36\):
+\[
+\sqrt{36}=6
+\]
+
+4) Sustituye:
+\[
+\sqrt{72}=6\sqrt{2}
+\]
+
+### Resultado
+\[
+\sqrt{72}=6\sqrt{2}
+\]
+
+---
+
+## Ejercicios (3) 🧮
+Resuelve mostrando pasos y dejando la respuesta simplificada:
+
+1)
+\[
+\frac{a^5\cdot a^{-2}}{a^4}
+\]
+(supón \(a\neq 0\))
+
+2)
+\[
+(2x^3y^{-2})^2
+\]
+(simplifica y deja exponentes positivos)
+
+3)
+\[
+\sqrt{200}
+\]
+(simplifica el radical lo más posible)
+
+---
+---
+
+## Factorización: factor común, diferencia de cuadrados, trinomio cuadrado perfecto, trinomio general 🧠✍️
+
+---
+
+## Introducción
+Factorizar es reescribir una expresión como un producto de expresiones más simples. En vez de tener una suma o resta “revuelta”, la dejas como multiplicaciones. Esto sirve para simplificar, resolver ecuaciones, reducir fracciones algebraicas y, más adelante, para integrales y límites ✅.
+
+Idea rápida:
+\[
+\text{Expandir} \Rightarrow \text{multiplicar y sumar}
+\qquad
+\text{Factorizar} \Rightarrow \text{al revés: “desarmar”}
+\]
+
+---
+
+## Términos básicos (para no perderte) 🧩
+- Factor: cada parte que se multiplica. Ejemplo:
+\[
+(2x)(3y)
+\]
+tiene factores \(2x\) y \(3y\).
+
+- Factor común: lo que se repite en todos los términos.
+- Binomio: expresión con 2 términos, por ejemplo \(x+5\).
+- Trinomio: expresión con 3 términos, por ejemplo \(x^2+5x+6\).
+
+---
+
+# 1) Factor común ✅
+### Qué es
+Si todos los términos comparten un mismo número, letra o potencia, lo puedes “sacar” como multiplicación.
+
+Regla:
+\[
+ab+ac=a(b+c)
+\]
+
+### Cómo identificarlo (mecánico) 🧠✍️
+1) Busca el máximo común divisor de los coeficientes numéricos.
+2) Para letras, toma la menor potencia común en todos los términos.
+
+---
+
+# 2) Diferencia de cuadrados ✅
+### Cuándo aplica
+Cuando tienes:
+\[
+a^2-b^2
+\]
+
+Regla:
 \[
 a^2-b^2=(a-b)(a+b)
 \]
 
-### Trinomio cuadrado perfecto  
+Ojo:
+- Funciona con resta, no con suma.
+- Ambos deben ser cuadrados perfectos (o algo que puedas ver como cuadrado).
+
+Ejemplos de “cuadrado disfrazado”:
+\[
+9x^2=(3x)^2,\quad 25y^4=(5y^2)^2
+\]
+
+---
+
+# 3) Trinomio cuadrado perfecto ✅
+### Cuándo aplica
+Cuando tienes:
+\[
+a^2\pm 2ab+b^2
+\]
+
+Reglas:
 \[
 a^2+2ab+b^2=(a+b)^2
 \]
+\[
+a^2-2ab+b^2=(a-b)^2
+\]
 
-### Trinomio general  
+Cómo reconocerlo:
+1) El primer término es un cuadrado: \(a^2\).
+2) El último término es un cuadrado: \(b^2\).
+3) El término de en medio es \(2ab\) (con signo \(+\) o \(-\)).
+
+---
+
+# 4) Trinomio general ✅
+Aquí hablamos del típico:
+\[
+ax^2+bx+c
+\]
+y el caso más simple:
+\[
+x^2+bx+c
+\]
+
+### Caso A: cuando \(a=1\) ✅
+Buscas dos números \(m\) y \(n\) que cumplan:
+\[
+m+n=b
+\]
+\[
+mn=c
+\]
+Entonces:
 \[
 x^2+bx+c=(x+m)(x+n)
 \]
 
+### Caso B: cuando \(a\neq 1\) (cuando aplique) ✅
+Buscas dos números que multipliquen \(ac\) y sumen \(b\). Después separas el término \(bx\) en dos y factorizas por agrupación.
+
 ---
 
-## Ejemplos resueltos (2) ✅  
-
-### Ejemplo 1  
+# Ejemplo 1 (factor común + diferencia de cuadrados) ✅
+Factoriza completamente:
 \[
-6x^2-9x=3x(2x-3)
+12x^2-3
 \]
 
-### Ejemplo 2  
+### Paso a paso 🧠✍️
+1) Factor común numérico: el máximo común divisor de \(12\) y \(3\) es \(3\).
 \[
-x^2-16=(x-4)(x+4)
+12x^2-3=3(4x^2-1)
 \]
 
----
-
-## Ejercicios (3) 📝  
-
-1) \[
-10y^3+15y^2
-\]
-
-2) \[
-9a^2-25
-\]
-
-3) \[
-x^2-7x+10
-\]
-
----
-
-# 01.5 Simplificación de expresiones racionales 🧼  
-
+2) Ahora observa \(4x^2-1\). Es diferencia de cuadrados:
 \[
-\frac{P(x)}{Q(x)},\qquad Q(x)\neq 0
+4x^2=(2x)^2,\quad 1=1^2
 \]
-
-Cancelar solo factores.
-
----
-
-## Ejemplos resueltos (2) ✅  
-
-### Ejemplo 1  
+Entonces:
 \[
-\frac{x^2-9}{x^2-3x}=\frac{x+3}{x},\qquad x\neq0,3
+4x^2-1=(2x-1)(2x+1)
 \]
 
-### Ejemplo 2  
+3) Sustituye:
 \[
-\frac{2x^2-8}{4x}=\frac{(x-2)(x+2)}{2x},\qquad x\neq0
+12x^2-3=3(2x-1)(2x+1)
+\]
+
+### Resultado
+\[
+12x^2-3=3(2x-1)(2x+1)
 \]
 
 ---
 
-## Ejercicios (3) 📝  
-
-1) \[
-\frac{x^2-4x}{x^2}
+# Ejemplo 2 (trinomio cuadrado perfecto + trinomio general) ✅
+Factoriza completamente:
+\[
+x^2+10x+25
 \]
 
-2) \[
-\frac{a^2-1}{a^2-a}
+### Paso a paso 🧠✍️
+1) Verifica si es trinomio cuadrado perfecto:
+- \(x^2\) es \((x)^2\)
+- \(25\) es \((5)^2\)
+- El término medio debe ser \(2\cdot x\cdot 5=10x\) ✅
+
+2) Entonces:
+\[
+x^2+10x+25=(x+5)^2
 \]
 
-3) \[
-\frac{x^2-1}{x-1}
+### Resultado
+\[
+x^2+10x+25=(x+5)^2
+\]
+
+Nota: aquí también “parece” trinomio general con \(a=1\). Si buscas \(m,n\) tal que \(m+n=10\) y \(mn=25\), sale \(m=5,n=5\), y queda:
+\[
+(x+5)(x+5)=(x+5)^2
 \]
 
 ---
 
-# 01.6 Ecuaciones ✅  
+## Ejercicios (3) 🧮
+Factoriza completamente (hasta donde se pueda), mostrando pasos:
 
-## Lineales  
+1) Factor común:
+\[
+15x^3+10x^2
+\]
+
+2) Diferencia de cuadrados:
+\[
+9y^2-16
+\]
+
+3) Trinomio general:
+\[
+x^2-7x+12
+\]
+
+---
+---
+
+## Simplificación de expresiones racionales 🧠✍️
+
+---
+
+## Introducción
+Una expresión racional es una fracción donde arriba y abajo hay polinomios (sumas y restas de términos con potencias de \(x\) u otras letras). Se ve así:
+\[
+\frac{P(x)}{Q(x)}
+\]
+donde \(P(x)\) y \(Q(x)\) son polinomios y se exige:
+\[
+Q(x)\neq 0
+\]
+
+Simplificar significa reducir la fracción cancelando factores comunes, igual que con fracciones numéricas, pero aquí esos factores son expresiones algebraicas ✅.
+
+---
+
+## Términos que debes dominar 🧩
+- Polinomio: suma/resta de términos como \(3x^2\), \(-5x\), \(7\). Ejemplo:
+\[
+x^2-4x+3
+\]
+- Factor: algo que se multiplica. Ejemplo:
+\[
+(x-1)(x-3)
+\]
+- Factor común: factor que aparece tanto en numerador como en denominador.
+- Cancelar: dividir numerador y denominador entre el mismo factor (distinto de cero).
+- Restricciones del dominio: valores que NO puede tomar la variable porque anulan el denominador. Eso se conserva incluso si “se cancela”.
+
+---
+
+## Regla central ✅
+Solo puedes cancelar factores, no términos sueltos.
+
+Correcto:
+\[
+\frac{(x-2)(x+5)}{(x-2)(x-1)}=\frac{x+5}{x-1}
+\quad \text{con } x\neq 2,\ x\neq 1
+\]
+
+Incorrecto (error común):
+\[
+\frac{x+5}{x+1}\neq \frac{5}{1}
+\]
+porque \(x\) y \(x\) NO son factores separados; están dentro de una suma.
+
+---
+
+## Procedimiento para simplificar (paso a paso) 🧠✍️
+1) Factoriza numerador y denominador lo más posible:
+   - factor común
+   - diferencia de cuadrados
+   - trinomio cuadrado perfecto
+   - trinomio general (si aplica)
+
+2) Anota restricciones desde el inicio:
+\[
+Q(x)\neq 0
+\]
+
+3) Cancela factores comunes (exactamente iguales) en numerador y denominador.
+
+4) Deja la expresión reducida y conserva las restricciones originales.
+
+---
+
+# Ejemplo 1 (diferencia de cuadrados) ✅
+Simplifica:
+\[
+\frac{x^2-9}{x^2-3x}
+\]
+
+### Paso a paso 🧠✍️
+1) Restricciones del denominador:
+\[
+x^2-3x\neq 0
+\]
+Factorizamos:
+\[
+x^2-3x=x(x-3)
+\]
+Entonces:
+\[
+x(x-3)\neq 0 \Rightarrow x\neq 0,\ x\neq 3
+\]
+
+2) Factoriza el numerador (diferencia de cuadrados):
+\[
+x^2-9=(x-3)(x+3)
+\]
+
+3) Sustituye factorizado:
+\[
+\frac{(x-3)(x+3)}{x(x-3)}
+\]
+
+4) Cancela el factor común \((x-3)\) (ojo: solo si \(x\neq 3\), y ya está restringido):
+\[
+\frac{(x-3)(x+3)}{x(x-3)}=\frac{x+3}{x}
+\]
+
+### Resultado (con restricciones)
+\[
+\frac{x^2-9}{x^2-3x}=\frac{x+3}{x},\quad x\neq 0,\ x\neq 3
+\]
+
+---
+
+# Ejemplo 2 (trinomio general + cancelación) ✅
+Simplifica:
+\[
+\frac{x^2+5x+6}{x^2-4}
+\]
+
+### Paso a paso 🧠✍️
+1) Restricciones del denominador:
+\[
+x^2-4\neq 0
+\]
+Factorizamos (diferencia de cuadrados):
+\[
+x^2-4=(x-2)(x+2)
+\]
+Entonces:
+\[
+(x-2)(x+2)\neq 0 \Rightarrow x\neq 2,\ x\neq -2
+\]
+
+2) Factoriza el numerador (trinomio con \(a=1\)):
+Buscamos \(m,n\) tales que:
+\[
+m+n=5,\quad mn=6
+\]
+Sirven \(2\) y \(3\). Entonces:
+\[
+x^2+5x+6=(x+2)(x+3)
+\]
+
+3) Sustituye:
+\[
+\frac{(x+2)(x+3)}{(x-2)(x+2)}
+\]
+
+4) Cancela el factor común \((x+2)\) (ojo: solo si \(x\neq -2\), y ya está restringido):
+\[
+\frac{(x+2)(x+3)}{(x-2)(x+2)}=\frac{x+3}{x-2}
+\]
+
+### Resultado (con restricciones)
+\[
+\frac{x^2+5x+6}{x^2-4}=\frac{x+3}{x-2},\quad x\neq 2,\ x\neq -2
+\]
+
+---
+
+## Ejercicios (3) 🧮
+Simplifica completamente, escribe restricciones y muestra pasos:
+
+1)
+\[
+\frac{6x^2}{3x}
+\]
+
+2)
+\[
+\frac{x^2-16}{x^2+4x}
+\]
+
+3)
+\[
+\frac{x^2-2x-15}{x^2-25}
+\]
+
+---
+---
+
+## Ecuaciones: lineales, cuadráticas, ecuaciones con fracciones (limpieza de denominadores) 🧠✍️
+
+---
+
+## Introducción
+Una ecuación es una igualdad donde hay una o más incógnitas (letras) y tu chamba es encontrar qué valor hace verdadera la igualdad.
+
+Forma general:
+\[
+\text{expresión}=\text{expresión}
+\]
+
+Solucionar una ecuación significa encontrar el valor de la variable que cumple la igualdad. Ese valor se llama solución o raíz ✅.
+
+Regla de oro:
+Lo que hagas de un lado, lo haces del otro, para no romper la igualdad.
+
+---
+
+## Términos básicos 🧩
+- Incógnita: la letra, por ejemplo \(x\).
+- Solución: valor que hace verdadera la ecuación.
+- Verificar: sustituir la solución en la ecuación original para confirmar.
+- Ecuaciones equivalentes: ecuaciones con las mismas soluciones (por operaciones válidas).
+- Restricciones: valores prohibidos, sobre todo cuando hay denominadores.
+
+---
+
+# 1) Ecuaciones lineales ✅
+### Qué son
+Son ecuaciones donde la variable está a la potencia 1. Forma típica:
 \[
 ax+b=c
 \]
+con \(a\neq 0\).
 
-## Cuadráticas  
+### Objetivo
+Dejar sola a \(x\) aplicando operaciones inversas.
+
+### Procedimiento (paso a paso) 🧠✍️
+1) Quita paréntesis si hay.
+2) Junta términos con \(x\) en un lado y números en el otro.
+3) Divide entre el coeficiente de \(x\).
+
+---
+
+# 2) Ecuaciones cuadráticas ✅
+### Qué son
+Son ecuaciones donde aparece \(x^2\). Forma general:
 \[
 ax^2+bx+c=0
 \]
+con \(a\neq 0\).
 
+### Formas comunes de resolver
+A) Factorización (si se puede).
+B) Fórmula general (sirve siempre).
+
+### Fórmula general 📌
+Para:
 \[
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+ax^2+bx+c=0
+\]
+la solución es:
+\[
+x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
 \]
 
-## Con fracciones  
-Multiplicar por el mcm.
+El término:
+\[
+\Delta=b^2-4ac
+\]
+se llama discriminante y te dice cuántas soluciones reales hay:
+- Si \(\Delta>0\): dos soluciones reales.
+- Si \(\Delta=0\): una solución real (doble).
+- Si \(\Delta<0\): no hay soluciones reales (sí complejas).
 
 ---
 
-## Ejemplos resueltos (2) ✅  
-
-### Ejemplo 1  
+# 3) Ecuaciones con fracciones (limpieza de denominadores) ✅
+### Qué son
+Son ecuaciones donde \(x\) aparece en fracciones, por ejemplo:
 \[
-3x-7=11\Rightarrow x=6
+\frac{x}{3}+\frac{1}{2}=5
+\]
+o:
+\[
+\frac{2}{x-1}=\frac{3}{x+2}
 \]
 
-### Ejemplo 2  
+### Idea central
+Multiplicas toda la ecuación por el m.c.m. de los denominadores para eliminar fracciones. A eso se le llama limpieza de denominadores.
+
+### Regla de cuidado ⚠️
+Antes de multiplicar, anota restricciones:
+Si un denominador es \(x-1\), entonces:
 \[
-\frac{x}{3}+\frac{1}{2}=2\Rightarrow x=\frac{9}{2}
+x-1\neq 0 \Rightarrow x\neq 1
+\]
+Eso se conserva siempre.
+
+### Procedimiento (paso a paso) 🧠✍️
+1) Identifica denominadores y escribe restricciones.
+2) Calcula el m.c.m. de los denominadores.
+3) Multiplica toda la ecuación por ese m.c.m.
+4) Resuelve la ecuación resultante (normalmente lineal o cuadrática).
+5) Verifica y elimina soluciones que violen restricciones.
+
+---
+
+# Ejemplo 1 (lineal) ✅
+Resuelve:
+\[
+3x-7=11
+\]
+
+### Paso a paso 🧠✍️
+1) Suma \(7\) en ambos lados:
+\[
+3x-7+7=11+7
+\]
+\[
+3x=18
+\]
+
+2) Divide entre \(3\):
+\[
+x=\frac{18}{3}=6
+\]
+
+### Verificación ✅
+Sustituye \(x=6\):
+\[
+3(6)-7=18-7=11
+\]
+Se cumple.
+
+### Resultado
+\[
+x=6
 \]
 
 ---
 
-## Ejercicios (3) 📝  
-
-1) \[
-5x+4=19
+# Ejemplo 2 (con fracciones y limpieza de denominadores) ✅
+Resuelve:
+\[
+\frac{x}{4}-\frac{1}{2}=\frac{3}{8}
 \]
 
-2) \[
+### Paso a paso 🧠✍️
+1) Denominadores: \(4,2,8\). El m.c.m. es \(8\). ✅
+
+2) Multiplica toda la ecuación por \(8\):
+\[
+8\left(\frac{x}{4}\right)-8\left(\frac{1}{2}\right)=8\left(\frac{3}{8}\right)
+\]
+
+3) Simplifica cada término:
+\[
+8\cdot \frac{x}{4}=\frac{8}{4}x=2x
+\]
+\[
+8\cdot \frac{1}{2}=\frac{8}{2}=4
+\]
+\[
+8\cdot \frac{3}{8}=3
+\]
+
+Entonces queda:
+\[
+2x-4=3
+\]
+
+4) Resuelve la lineal:
+\[
+2x=7
+\]
+\[
+x=\frac{7}{2}
+\]
+
+### Verificación ✅
+Sustituye \(x=\frac{7}{2}\):
+\[
+\frac{\frac{7}{2}}{4}-\frac{1}{2}=\frac{7}{8}-\frac{1}{2}
+\]
+Convierte \(\frac{1}{2}\) a octavos:
+\[
+\frac{1}{2}=\frac{4}{8}
+\]
+Entonces:
+\[
+\frac{7}{8}-\frac{4}{8}=\frac{3}{8}
+\]
+Se cumple.
+
+### Resultado
+\[
+x=\frac{7}{2}
+\]
+
+---
+
+## Ejercicios (3) 🧮
+Resuelve mostrando pasos y verifica al final:
+
+1) Lineal:
+\[
+5x+9=2x-3
+\]
+
+2) Cuadrática (usa factorización si puedes):
+\[
 x^2-5x+6=0
 \]
 
-3) \[
-\frac{x}{4}-\frac{1}{3}=\frac{1}{2}
+3) Con fracciones (limpieza de denominadores):
+\[
+\frac{x}{3}+\frac{1}{6}=2
 \]
 
+---
+---
 ---
